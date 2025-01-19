@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Dropdown menu positioning */
-        #dropdownNavbar {
-          position: absolute;
-          top: 100%; /* Position below the dropdown button */
-          left: 0;
-          z-index: 1000; /* Ensure it appears above other content */
-        }
-      </style>
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
       <!-- Font Awesome CSS -->
@@ -69,6 +61,12 @@
           .owl-prev:hover, .owl-next:hover {
               background: rgba(0, 0, 0, 0.8) !important;
           }
+          #dropdownNavbar {
+          position: absolute;
+          top: 100%; /* Position below the dropdown button */
+          left: 0;
+          z-index: 1000; /* Ensure it appears above other content */
+        }
       </style>
   </head>
 </head>
@@ -236,7 +234,22 @@
           ]
       });
   });
-      
+            // Dropdown toggle logic
+            document.getElementById('dropdownNavbarLink').addEventListener('click', function() {
+                const dropdown = document.getElementById('dropdownNavbar');
+                dropdown.classList.toggle('hidden');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                const dropdown = document.getElementById('dropdownNavbar');
+                const dropdownButton = document.getElementById('dropdownNavbarLink');
+                if (!dropdownButton.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.classList.add('hidden');
+                }
+            });
+        
+
      
   
 </script>
