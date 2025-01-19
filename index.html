@@ -67,6 +67,22 @@
           left: 0;
           z-index: 1000; /* Ensure it appears above other content */
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        
+        }
+
+        .animated-box {
+            animation: fadeIn 0.5s ease-in-out;
+        }
       </style>
   </head>
 </head>
@@ -213,7 +229,7 @@
   </div>
   <!-- End Single Slider -->
 </div>
-<div class="text-center mt-1 font-bold text-2xl text-indigo-900">WELCOME <br> TO <br> MeD-SiNE HEALTHCARE</div>
+<div class="text-center mt-3 font-bold text-2xl text-indigo-900">WELCOME <br> TO <br> MeD-SiNE HEALTHCARE</div>
 <p class="text-center mt-3 p-3 text-gray-400">Your better live our responsibility</p>
 
  <!-- Container -->
@@ -223,10 +239,10 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
       <!-- Box 1: Vision -->
-      <div class="bg-white p-8 shadow-lg rounded-lg">
+      <div class="bg-white p-8 shadow-lg rounded-lg animated-box">
           <h2 class="text-3xl font-bold text-blue-800 mb-4 text-center">VISION</h2>
           <p class="text-gray-400 text-lg leading-relaxed text-center">
-            We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet you unique healthcare needs. 
+            We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
             We were established in 2020 and incorporated in 2024. 
             We focus on quality, innovation, and customer satisfaction,
              deliver tailored solutions to meet the diverse needs of our clients. 
@@ -234,13 +250,13 @@
       </div>
 
       <!-- Box 2: Mission -->
-      <div class="bg-white p-8 shadow-lg rounded-lg">
+      <div class="bg-white p-8 shadow-lg rounded-lg animated-box">
           <h2 class="text-3xl font-bold text-green-800 mb-4 text-center">MISSION</h2>
           <p class="text-gray-400 text-lg leading-relaxed text-center">
-            In today’s world. Accessing quality pharmaceuticals has become a significant challenge. 
+            In today's world, accessing quality pharmaceuticals has become a significant challenge. 
             High-quality medications are often prohibitively expensive, while more affordable options 
             frequently fail to meet the necessary standards to ensure effective treatment.
-             MeD-SiNE Healthcare is dedicated to bridging this gap by producing top-quality pharmaceuticals at process that are accessible to all.
+             MeD-SiNE Healthcare is dedicated to bridging this gap by producing top-quality pharmaceuticals at prices that are accessible to all.
           </p>
       </div>
 
@@ -248,7 +264,7 @@
 
 </div>
 <!--footer-->
-<footer id="footer" class="bg-gray-900 text-white py-8">
+<footer id="footer" class="bg-gray-900 text-white py-8 mt-5 pt-4">
   <!-- Footer Top -->
   <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -257,29 +273,7 @@
               <h2 class="text-xl font-bold">Who are we?</h2>
               <p class="text-gray-400">
               </p>
-              <!-- Social Icons -->
-              <!-- <ul class="flex space-x-4">
-                  <li>
-                      <a href="https://www.facebook.com/profile.php?id=61553849536110" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                          <i class="icofont-facebook text-2xl"></i>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                          <i class="icofont-twitter text-2xl"></i>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://in.linkedin.com/in/priyan-pharmaceuticals-6a413a2a0" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                          <i class="icofont-linkedin text-2xl"></i>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://instagram.com/priyanpharma" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                          <i class="icofont-instagram text-2xl"></i>
-                      </a>
-                  </li>
-              </ul> -->
+
           </div>
 
           <!-- Site Map Section -->
