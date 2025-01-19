@@ -14,6 +14,63 @@
           z-index: 1000; /* Ensure it appears above other content */
         }
       </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <!-- Custom CSS -->
+      <style>
+          .hero-slider .single-slider {
+              background-size: cover;
+              background-position: center;
+              height: 500px; /* Adjust height as needed */
+              display: flex;
+              align-items: center;
+          }
+          .hero-slider .text {
+              background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+              padding: 20px;
+              border-radius: 10px;
+          }
+          .hero-slider h1 {
+              font-size: 2.5rem;
+              font-weight: bold;
+              color: #333;
+          }
+          .hero-slider p {
+              font-size: 1.2rem;
+              color: #555;
+          }
+          .hero-slider .btn {
+              margin-right: 10px;
+              padding: 10px 20px;
+              border-radius: 5px;
+              text-decoration: none;
+              color: #fff;
+              background-color: #007bff;
+          }
+          .hero-slider .btn.primary {
+              background-color: #28a745;
+          }
+          .owl-nav {
+              position: absolute;
+              top: 50%;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              transform: translateY(-50%);
+          }
+          .owl-prev, .owl-next {
+              background: rgba(0, 0, 0, 0.5) !important;
+              color: #fff !important;
+              padding: 10px !important;
+              border-radius: 50% !important;
+          }
+          .owl-prev:hover, .owl-next:hover {
+              background: rgba(0, 0, 0, 0.8) !important;
+          }
+      </style>
+  </head>
 </head>
 <body >
    
@@ -83,7 +140,102 @@
     </div>
   </nav>
   <!-- component -->
+<!-- Hero Slider -->
+<div class="hero-slider owl-carousel owl-theme owl-loaded">
+  <!-- Start Single Slider -->
+  <div class="single-slider" style="background-image:url(./med.jpg)">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-7">
+                  <div class="text">
+                      <h1>India Hub of <span>pharmaceutical</span> manufacturing</h1>
+                      <p>Your Health is our mission</p>
+                      <div class="button">
+                          <a href="https://priyanpharmaceuticals.com/contact-us" class="btn">Contact Now</a>
+                          <a href="https://priyanpharmaceuticals.com/about-us" class="btn primary">About Us</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Single Slider -->
+  <!-- Start Single Slider -->
+  <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-7">
+                  <div class="text">
+                      <h1><span>Pharmaceutical</span> products Trusted by doctors, across the globe</h1>
+                      <p>Your Health is our mission</p>
+                      <div class="button">
+                          <a href="https://priyanpharmaceuticals.com/contact-us" class="btn">Contact Now</a>
+                          <a href="https://priyanpharmaceuticals.com/about-us" class="btn primary">About Us</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Single Slider -->
+  <!-- Start Single Slider -->
+  <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner3.jpg)">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-7">
+                  <div class="text">
+                      <h1><span>Regulatory</span> Strict regulatory compliance of various regulatory authority</h1>
+                      <p>Your Health is our mission</p>
+                      <div class="button">
+                          <a href="https://priyanpharmaceuticals.com/contact-us" class="btn">Contact Now</a>
+                          <a href="https://priyanpharmaceuticals.com/about-us" class="btn primary">About Us</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Single Slider -->
+  <!-- Start Single Slider -->
+  <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner4.jpg)">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-7">
+                  <div class="text">
+                      <h1>Cost effectiveness <span>Our mission</span> to do available <span>cost-effective</span> products across the globe</h1>
+                      <p>Your Health is our mission</p>
+                      <div class="button">
+                          <a href="https://priyanpharmaceuticals.com/contact-us" class="btn">Contact Now</a>
+                          <a href="https://priyanpharmaceuticals.com/about-us" class="btn primary">About Us</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Single Slider -->
+</div>
 
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Initialize Owl Carousel -->
+<script>
+  $(document).ready(function(){
+      $('.hero-slider').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          items: 1,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          navText: [
+              "<i class='fa fa-angle-left'></i>",
+              "<i class='fa fa-angle-right'></i>"
+          ]
+      });
+  });
       
      
   
