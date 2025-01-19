@@ -15,6 +15,29 @@
             height: 600px; /* Set a fixed height for all images */
             object-fit: cover; /* Ensure images cover the area without distortion */
         }
+        .product-box {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+            border: 2px solid #e2e8f0; /* Border color */
+            border-radius: 0.5rem; /* Rounded corners */
+            padding: 1.5rem; /* Padding inside the box */
+            text-align: center; /* Center text */
+            background: white; /* White background */
+        }
+
+        .product-box:hover {
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 1.5rem; /* Space between boxes */
+            padding: 2rem; /* Padding around the grid */
+            max-width: 1200px; /* Max width of the grid */
+            margin: 0 auto; /* Center the grid */
+        }
+      
     </style>
 </head>
 <body>
@@ -61,67 +84,67 @@
 </div>
 
 <body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8 items-center">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="  py-8 ">
+        <div class="grid-container ">
             <!-- Box 1: Injections -->
-            <a href="./injection.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./injection.html" class="block product-box ">
+                <div class=" border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-syringe text-3xl text-blue-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Injections</h3>
                 </div>
             </a>
 
             <!-- Box 2: Capsules -->
-            <a href="./Capsules.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./Capsules.html" class="block product-box ">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-capsules text-3xl text-green-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Capsules</h3>
                 </div>
             </a>
 
             <!-- Box 3: Creams -->
-            <a href="./Creams.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./Creams.html" class="block product-box ">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-prescription-bottle text-3xl text-purple-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Creams</h3>
                 </div>
             </a>
 
             <!-- Box 4: Medical Devices -->
-            <a href="./Medical-Devices.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./Medical-Devices.html" class="block product-box">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-toolbox text-3xl text-yellow-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Medical Devices</h3>
                 </div>
             </a>
 
             <!-- Box 5: Syrups -->
-            <a href="./Syrups.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./Syrups.html" class="block product-box">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-prescription-bottle-alt text-3xl text-red-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Syrups</h3>
                 </div>
             </a>
 
             <!-- Box 6: Tablets -->
-            <a href="./Tablets.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./Tablets.html" class="block product-box">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-tablets text-3xl text-indigo-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Tablets</h3>
                 </div>
             </a>
 
             <!-- Box 7: Injections LVP -->
-            <a href="./injection-lvp.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./injection-lvp.html" class="block product-box">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-syringe text-3xl text-pink-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Injections LVP</h3>
                 </div>
             </a>
 
             <!-- Box 8: Oncology Products -->
-            <a href="./oncology.html" class="block">
-                <div class="border-2 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
+            <a href="./oncology.html" class="block product-box">
+                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
                     <i class="fas fa-medkit text-3xl text-teal-500 mb-4"></i>
                     <h3 class="text-lg font-semibold text-gray-800">Oncology Products</h3>
                 </div>
