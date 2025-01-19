@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medisine Product List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Dropdown menu positioning */
+        #dropdownNavbar {
+          position: absolute;
+          top: 100%; /* Position below the dropdown button */
+          left: 0;
+          z-index: 1000; /* Ensure it appears above other content */
+        }
+    </style>
+</head>
+<body >
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+                <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+            </li>
+            <li class="relative">
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                            <a href="./injection.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Injections</a>
+                        </li>
+                        <li>
+                            <a href="Capsules.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Capsules</a>
+                        </li>
+                        <li>
+                            <a href="Creams.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Creams</a>
+                        </li>
+                        <li>
+                            <a href="Medical-Devices.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Medical Devices</a>
+                        </li>
+                        <li>
+                            <a href="Syrups.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Syrups</a>
+                        </li>
+                        <li>
+                            <a href="Tablets.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tablets</a>
+                        </li>
+                        <li>
+                            <a href="injection-lvp.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Injections lvp</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Oncology Products</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mx-auto">
+    <!-- Search Bar -->
+    <div class="flex justify-between items-center mt-2 mb-8">
+        <h1 class="text-3xl font-bold ml-20 pl-20 ">Capsules List</h1>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            class="px-4 mr-2 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+    </div>
+
+    <!-- Product List Container -->
+    <div id="product-list" class="mt-1 ml-20 mr-20 pr-5 space-y-8"></div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination" class="flex justify-center mt-8 space-x-2">
+        <button id="prevPage" class="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300">Previous</button>
+        <span id="pageInfo" class="px-4 py-2">Page 1 of 1</span>
+        <button id="nextPage" class="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300">Next</button>
+    </div>
+</div>
+
+<script>
+    // JSON data (10 items)
+    const productData =  
+    
+    [
+    [
+  {
+    "Sr.No.": 1,
+    "Product Name": "Acetaminophen",
+    "Product Code": "SGH",
+    "Strength": "500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 2,
+    "Product Name": "Acyclovir",
+    "Product Code": "SGH",
+    "Strength": "200mg, 400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 3,
+    "Product Name": "Albendazole",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 4,
+    "Product Name": "Alendronate Monosodium",
+    "Product Code": "SGH",
+    "Strength": "70mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 5,
+    "Product Name": "Alprazolam",
+    "Product Code": "SGH",
+    "Strength": "0.25mg, 0.5mg, 1mg, 2mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 6,
+    "Product Name": "Amiodaron",
+    "Product Code": "SGH",
+    "Strength": "200mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 7,
+    "Product Name": "Amitriptyline",
+    "Product Code": "FC",
+    "Strength": "25 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 8,
+    "Product Name": "Amlodipine",
+    "Product Code": "SGH",
+    "Strength": "5mg, 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 9,
+    "Product Name": "Amoxicillin & Clavulanate Potassium",
+    "Product Code": "KST",
+    "Strength": "500mg + 125mg, 250mg + 125mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 10,
+    "Product Name": "Artemether & Lumefantrine",
+    "Product Code": "SGH",
+    "Strength": "20 mg + 120 mg, 80 mg + 480 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 11,
+    "Product Name": "Aspirin Delayed Release",
+    "Product Code": "SGH",
+    "Strength": "81mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 12,
+    "Product Name": "Atorvastatin",
+    "Product Code": "SGH",
+    "Strength": "10mg, 20mg, 40mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 13,
+    "Product Name": "Azathioprine",
+    "Product Code": "",
+    "Strength": "50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 14,
+    "Product Name": "Azhithromycin Dispersible",
+    "Product Code": "KST",
+    "Strength": "100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 15,
+    "Product Name": "Azithromycin",
+    "Product Code": "KST",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 16,
+    "Product Name": "Azithromycin",
+    "Product Code": "SGH",
+    "Strength": "1000mg",
+    "Dosage form": ""
+  },
+  {
+    "Sr.No.": 17,
+    "Product Name": "Biperiden",
+    "Product Code": "SGH",
+    "Strength": "2 mg, 4 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 18,
+    "Product Name": "Bisacodyl",
+    "Product Code": "SGH",
+    "Strength": "5mg, 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 19,
+    "Product Name": "Bisoprolol",
+    "Product Code": "SGH",
+    "Strength": "2.5 mg, 5 mg, 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 20,
+    "Product Name": "Bromazepam",
+    "Product Code": "SGH",
+    "Strength": "1.5mg, 3mg, 6mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 21,
+    "Product Name": "Calcium Acetate",
+    "Product Code": "SGH",
+    "Strength": "667mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 22,
+    "Product Name": "Calcium Citrate",
+    "Product Code": "SGH",
+    "Strength": "600mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 23,
+    "Product Name": "Calcium Folinate (Folinic Acid)",
+    "Product Code": "KWT",
+    "Strength": "15 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 24,
+    "Product Name": "Calcium-Carbonate",
+    "Product Code": "SRV",
+    "Strength": "500 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 25,
+    "Product Name": "Carbidopa Levodopa ER Tablet",
+    "Product Code": "",
+    "Strength": "25/100 mg, 50/200 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 26,
+    "Product Name": "Carbimazole",
+    "Product Code": "FC",
+    "Strength": "10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 27,
+    "Product Name": "Cefixime",
+    "Product Code": "KST",
+    "Strength": "100mg, 200mg, 400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 28,
+    "Product Name": "Cefpodoxime Dispersible",
+    "Product Code": "KST",
+    "Strength": "100mg, 200mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 29,
+    "Product Name": "Cefuroxime",
+    "Product Code": "KST",
+    "Strength": "200mg, 250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 30,
+    "Product Name": "Celecoxib",
+    "Product Code": "SGH",
+    "Strength": "200mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 31,
+    "Product Name": "Cetrrizine",
+    "Product Code": "SGH",
+    "Strength": "5mg, 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 32,
+    "Product Name": "Chlorpromazine Hydrochloride",
+    "Product Code": "SGH",
+    "Strength": "25mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 33,
+    "Product Name": "Chlorthalidone",
+    "Product Code": "",
+    "Strength": "25 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 34,
+    "Product Name": "Ciprofloxacin",
+    "Product Code": "KST",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 35,
+    "Product Name": "Ciprofloxacin & Ornidazole",
+    "Product Code": "SGH",
+    "Strength": "500mg + 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 36,
+    "Product Name": "Citalopram",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 37,
+    "Product Name": "Cladribine Tablet",
+    "Product Code": "",
+    "Strength": "10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 38,
+    "Product Name": "Clomipramine",
+    "Product Code": "SGH",
+    "Strength": "10mg, 25mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 39,
+    "Product Name": "Clonazepam",
+    "Product Code": "SGH",
+    "Strength": "1mg, 2 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 40,
+    "Product Name": "Clopidogrel",
+    "Product Code": "SGH",
+    "Strength": "75mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 41,
+    "Product Name": "Clozapine",
+    "Product Code": "PFB",
+    "Strength": "100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 42,
+    "Product Name": "Codeine",
+    "Product Code": "KWT",
+    "Strength": "30 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 43,
+    "Product Name": "Colchicine",
+    "Product Code": "FC",
+    "Strength": "0.5 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 44,
+    "Product Name": "Complex B (Thiamine 1mg + Riboflovin Hydrochloride 1mg + Pyridoxine, Hydrochloride 15mg + Nicotinamide 500 mcg+ Folic Acid 15 mcg+ Cyanocobalamin Tablet",
+    "Product Code": "SRV",
+    "Strength": "1 mg + 1 mg + 15 mg + 500 mcg + 15 mcg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 45,
+    "Product Name": "Cyclophosphamide",
+    "Product Code": "",
+    "Strength": "50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 46,
+    "Product Name": "Cyproterone",
+    "Product Code": "PC",
+    "Strength": "100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 47,
+    "Product Name": "Daclatasvir",
+    "Product Code": "SGH",
+    "Strength": "60mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 48,
+    "Product Name": "Dapagliflozin",
+    "Product Code": "SGH",
+    "Strength": "5mg, 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 49,
+    "Product Name": "Darunavir",
+    "Product Code": "SGH",
+    "Strength": "800mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 50,
+    "Product Name": "Deferasirox",
+    "Product Code": "SGH",
+    "Strength": "500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 51,
+    "Product Name": "Desloratadine",
+    "Product Code": "SGH",
+    "Strength": "5mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 52,
+    "Product Name": "Desloratadine & Montelukast",
+    "Product Code": "SGH",
+    "Strength": "2.5mg + 5mg, 5mg + 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 53,
+    "Product Name": "Diazepam",
+    "Product Code": "SGH",
+    "Strength": "5mg, 10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 54,
+    "Product Name": "Diclofenac Potassium",
+    "Product Code": "SGH",
+    "Strength": "25mg, 50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 55,
+    "Product Name": "Diclofenac Sodium",
+    "Product Code": "SGH",
+    "Strength": "75mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 56,
+    "Product Name": "Diosmin & Hesperidin Tablet",
+    "Product Code": "SGH",
+    "Strength": "450mg + 50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 57,
+    "Product Name": "Doxazosin",
+    "Product Code": "SGH",
+    "Strength": "4mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 58,
+    "Product Name": "Eltrombopag film coated Tablet",
+    "Product Code": "",
+    "Strength": "12.5 mg, 25 mg, 50 mg, 75 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 59,
+    "Product Name": "Entecavir",
+    "Product Code": "SGH",
+    "Strength": "0.5mg, 1mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 60,
+    "Product Name": "Erythromycon Stearate",
+    "Product Code": "KST",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 61,
+    "Product Name": "Etoricoxib",
+    "Product Code": "SGH",
+    "Strength": "90mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 62,
+    "Product Name": "Fenofibrate Tablet",
+    "Product Code": "SGH",
+    "Strength": "160mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 63,
+    "Product Name": "Finasteride",
+    "Product Code": "SGH",
+    "Strength": "5 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 64,
+    "Product Name": "Fluconazole",
+    "Product Code": "SGH",
+    "Strength": "150mg, 400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 65,
+    "Product Name": "Fludarabine",
+    "Product Code": "FHC",
+    "Strength": "10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 66,
+    "Product Name": "Flupentixol & Melitrasen",
+    "Product Code": "SGH",
+    "Strength": "0.5 + 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 67,
+    "Product Name": "Fluphenazine",
+    "Product Code": "KWT",
+    "Strength": "2.5 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 68,
+    "Product Name": "Folic Acid",
+    "Product Code": "SGH",
+    "Strength": "5mg, 400mcg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 69,
+    "Product Name": "Gabapentine",
+    "Product Code": "SGH",
+    "Strength": "100mg, 300mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 70,
+    "Product Name": "Gemfibrozil",
+    "Product Code": "SGH",
+    "Strength": "600mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 71,
+    "Product Name": "Glibenclamide",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 72,
+    "Product Name": "Hydralazine HCK",
+    "Product Code": "SGH",
+    "Strength": "25mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 73,
+    "Product Name": "Hydrochlorothiazine",
+    "Product Code": "SGH",
+    "Strength": "25mg, 50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 74,
+    "Product Name": "Hydrocortisone",
+    "Product Code": "SGH",
+    "Strength": "10mg, 20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 75,
+    "Product Name": "Hydroxychloroquine",
+    "Product Code": "SGH",
+    "Strength": "200mg, 400 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 76,
+    "Product Name": "Ibandronate Sodium",
+    "Product Code": "SGH",
+    "Strength": "150mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 77,
+    "Product Name": "Ibuprofen",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 78,
+    "Product Name": "Imipramine",
+    "Product Code": "SGH",
+    "Strength": "10mg, 25 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 79,
+    "Product Name": "Indomethacine",
+    "Product Code": "SGH",
+    "Strength": "25mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 80,
+    "Product Name": "Irbesartan",
+    "Product Code": "SGH",
+    "Strength": "150mg, 300mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 81,
+    "Product Name": "Isosorbide Dinitrate",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 82,
+    "Product Name": "Isotretinoin (Cis-retinoic Acid)",
+    "Product Code": "AJ",
+    "Strength": "4 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 83,
+    "Product Name": "Ketoconazole",
+    "Product Code": "SGH",
+    "Strength": "200mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 84,
+    "Product Name": "Ketoprofen",
+    "Product Code": "SGH",
+    "Strength": "75mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 85,
+    "Product Name": "Labetalol",
+    "Product Code": "SGH",
+    "Strength": "200mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 86,
+    "Product Name": "Levetiracetam",
+    "Product Code": "SGH",
+    "Strength": "500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 87,
+    "Product Name": "Levocetrizine",
+    "Product Code": "SGH",
+    "Strength": "5mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 88,
+    "Product Name": "Levocetrizine & Montelukast",
+    "Product Code": "SGH",
+    "Strength": "2.5mg + 5mg, 5mg + 10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 89,
+    "Product Name": "Levodopa & Carbidopa",
+    "Product Code": "SGH",
+    "Strength": "250mg + 25mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 90,
+    "Product Name": "Levodopa + Benserazide",
+    "Product Code": "KWT",
+    "Strength": "200 mg + 50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 91,
+    "Product Name": "Levofloxacin",
+    "Product Code": "SGH",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 92,
+    "Product Name": "Levofloxacin & Ornidazole",
+    "Product Code": "SGH",
+    "Strength": "500mg + 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 93,
+    "Product Name": "Levonor+Ethinyl Microgynon",
+    "Product Code": "EKG",
+    "Strength": "0.15 mg + 0.03 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 94,
+    "Product Name": "Levothyroxine",
+    "Product Code": "PKC",
+    "Strength": "50 mcg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 95,
+    "Product Name": "Linezolid",
+    "Product Code": "SGH",
+    "Strength": "600mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 96,
+    "Product Name": "Lisinopril & Hydrochlorothiazine",
+    "Product Code": "SGH",
+    "Strength": "5mg + 12,5mg, 10 + 12.5mg, 20mg + 12.5mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 97,
+    "Product Name": "Lithium Carbonate",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 98,
+    "Product Name": "Loratidine",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 99,
+    "Product Name": "Lorazepam",
+    "Product Code": "SGH",
+    "Strength": "1mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 100,
+    "Product Name": "Losartan Potasium",
+    "Product Code": "SGH",
+    "Strength": "25mg, 50mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 101,
+    "Product Name": "Losartan Potasium & Hydrochlorothizide",
+    "Product Code": "SGH",
+    "Strength": "50mg + 12.5mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 102,
+    "Product Name": "Mefenamic Acid",
+    "Product Code": "SGH",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 103,
+    "Product Name": "Meprobamet",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 104,
+    "Product Name": "Mercaptopurine",
+    "Product Code": "",
+    "Strength": "50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 105,
+    "Product Name": "Metformin",
+    "Product Code": "SGH",
+    "Strength": "850mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 106,
+    "Product Name": "Metformin & Glibenclamide Tablet",
+    "Product Code": "SGH",
+    "Strength": "500mg + 50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 107,
+    "Product Name": "Metformin & Vildagliptin",
+    "Product Code": "SGH",
+    "Strength": "1000mg + 50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 108,
+    "Product Name": "Methyldopa",
+    "Product Code": "SGH",
+    "Strength": "250 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 109,
+    "Product Name": "Methylprednisolone",
+    "Product Code": "SGH",
+    "Strength": "4mg, 8mg, 16mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 110,
+    "Product Name": "Metoprolol Tartrate",
+    "Product Code": "SGH",
+    "Strength": "50mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 111,
+    "Product Name": "Metronidazole",
+    "Product Code": "SGH",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 112,
+    "Product Name": "Miconazole Mucoadhesive",
+    "Product Code": "",
+    "Strength": "10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 113,
+    "Product Name": "Montelukast",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 114,
+    "Product Name": "Montelukast & Desloratadine",
+    "Product Code": "SGH",
+    "Strength": "5mg + 2.5mg, 10mg + 5mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 115,
+    "Product Name": "Morphine Immediate Release Tablet",
+    "Product Code": "KWT",
+    "Strength": "10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 116,
+    "Product Name": "Morphine prolonged release tablet",
+    "Product Code": "KWT",
+    "Strength": "10 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 117,
+    "Product Name": "Moxifloxacin Tablet",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 118,
+    "Product Name": "Multi Vitamins",
+    "Product Code": "SGH",
+    "Strength": "",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 119,
+    "Product Name": "Naproxen",
+    "Product Code": "SGH",
+    "Strength": "500 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 120,
+    "Product Name": "Nefopam HCL & Paracetamol",
+    "Product Code": "SGH",
+    "Strength": "30mg + 325mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 121,
+    "Product Name": "Nicotinamide",
+    "Product Code": "KWT",
+    "Strength": "100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 122,
+    "Product Name": "Nifedipine",
+    "Product Code": "FC",
+    "Strength": "10mg, 30 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 123,
+    "Product Name": "Nirmatrelvir",
+    "Product Code": "SGH",
+    "Strength": "150mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 124,
+    "Product Name": "Nystatin",
+    "Product Code": "SGH",
+    "Strength": "500000 IU",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 125,
+    "Product Name": "Omeprazole",
+    "Product Code": "SGH",
+    "Strength": "20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 126,
+    "Product Name": "Ondansetron",
+    "Product Code": "KST",
+    "Strength": "4 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 127,
+    "Product Name": "Ondansetron",
+    "Product Code": "SGH",
+    "Strength": "8 mg",
+    "Dosage form": ""
+  },
+  {
+    "Sr.No.": 128,
+    "Product Name": "Osimeritinib Tablet",
+    "Product Code": "",
+    "Strength": "40 mg, 80 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 129,
+    "Product Name": "Oxybutynin",
+    "Product Code": "SGH",
+    "Strength": "5 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 130,
+    "Product Name": "Pantoprazole",
+    "Product Code": "SGH",
+    "Strength": "40mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 131,
+    "Product Name": "Pantoprazole & Domperidone",
+    "Product Code": "SGH",
+    "Strength": "40mg + 30mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 132,
+    "Product Name": "Paracetamol",
+    "Product Code": "SGH",
+    "Strength": "500mg, 1000mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 133,
+    "Product Name": "Paracetamol & Orphendrine Citrate",
+    "Product Code": "SGH",
+    "Strength": "450mg + 35mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 134,
+    "Product Name": "Paracetamol + Ibuprofen + Caffien",
+    "Product Code": "SGH",
+    "Strength": "",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 135,
+    "Product Name": "Paracetamol, Phenylephrine, CPM & Caffeine",
+    "Product Code": "SGH",
+    "Strength": "500mg + 10mg + 2mg + 30mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 136,
+    "Product Name": "Phenobarbital",
+    "Product Code": "SGH",
+    "Strength": "100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 137,
+    "Product Name": "Phenytoin",
+    "Product Code": "HLL",
+    "Strength": "100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 138,
+    "Product Name": "Phenytoin Sodium",
+    "Product Code": "SGH",
+    "Strength": "25mg",
+    "Dosage form": ""
+  },
+  {
+    "Sr.No.": 139,
+    "Product Name": "Potassium Chloride",
+    "Product Code": "",
+    "Strength": "500 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 140,
+    "Product Name": "Potassium Iodide",
+    "Product Code": "SGH",
+    "Strength": "100 mcg & 200 mcg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 141,
+    "Product Name": "Potassium Iodide",
+    "Product Code": "SGH",
+    "Strength": "65mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 142,
+    "Product Name": "Potassium Permanganate",
+    "Product Code": "KWT",
+    "Strength": "500 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 143,
+    "Product Name": "Prednisolone",
+    "Product Code": "SGH",
+    "Strength": "5mg, 20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 144,
+    "Product Name": "Pregabalin",
+    "Product Code": "SGH",
+    "Strength": "75mg, 150mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 145,
+    "Product Name": "Primaquine Phosphate",
+    "Product Code": "SGH",
+    "Strength": "15mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 146,
+    "Product Name": "Probenecid",
+    "Product Code": "SGH",
+    "Strength": "500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 147,
+    "Product Name": "Propanolol",
+    "Product Code": "KST",
+    "Strength": "40 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 148,
+    "Product Name": "Propylthiouracil",
+    "Product Code": "FC",
+    "Strength": "50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 149,
+    "Product Name": "Pyridostigmine",
+    "Product Code": "KWT",
+    "Strength": "60 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 150,
+    "Product Name": "Pyrimethamine",
+    "Product Code": "",
+    "Strength": "25 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 151,
+    "Product Name": "Quetiapine Tablet",
+    "Product Code": "SGH",
+    "Strength": "25mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 152,
+    "Product Name": "Raltegravir",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 153,
+    "Product Name": "Ranitidine",
+    "Product Code": "SGH",
+    "Strength": "150mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 154,
+    "Product Name": "Risperidone",
+    "Product Code": "FC",
+    "Strength": "1 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 155,
+    "Product Name": "Ritonavir",
+    "Product Code": "SGH",
+    "Strength": "100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 156,
+    "Product Name": "Rivaroxaban",
+    "Product Code": "SGH",
+    "Strength": "10mg, 15mg, 20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 157,
+    "Product Name": "Rosuvastatin",
+    "Product Code": "SGH",
+    "Strength": "5mg, 10mg, 20mg, 40mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 158,
+    "Product Name": "Ruxolitinib Tablet",
+    "Product Code": "",
+    "Strength": "20 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 159,
+    "Product Name": "Sacubitril & Valsartan",
+    "Product Code": "SGH",
+    "Strength": "50mg, 100mg, 200mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 160,
+    "Product Name": "Salbutamol",
+    "Product Code": "SGH",
+    "Strength": "2mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 161,
+    "Product Name": "Serratiopeptidase",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 162,
+    "Product Name": "Sildenafil Citrate",
+    "Product Code": "SGH",
+    "Strength": "50 mg, 100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 163,
+    "Product Name": "Simvastatin",
+    "Product Code": "SGH",
+    "Strength": "20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 164,
+    "Product Name": "Sitagliptin",
+    "Product Code": "SGH",
+    "Strength": "25mg, 50mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 165,
+    "Product Name": "Sodium Valproate",
+    "Product Code": "SGH",
+    "Strength": "150, 200, 250, 400, 500 CR",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 166,
+    "Product Name": "Sofosbuvir",
+    "Product Code": "SGH",
+    "Strength": "400mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 167,
+    "Product Name": "Sofosbuvir & Velpatasvir",
+    "Product Code": "SGH",
+    "Strength": "400mg + 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 168,
+    "Product Name": "Spiramycin",
+    "Product Code": "SGH",
+    "Strength": "1M. IU, 3M. IU",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 169,
+    "Product Name": "Spironolactone",
+    "Product Code": "SGH",
+    "Strength": "25mg, 100mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 170,
+    "Product Name": "Sulfadiazine",
+    "Product Code": "FC",
+    "Strength": "500 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 171,
+    "Product Name": "Sulfasalazine",
+    "Product Code": "SGH",
+    "Strength": "500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 172,
+    "Product Name": "Tadalafil",
+    "Product Code": "SGH",
+    "Strength": "5mg, 20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 173,
+    "Product Name": "Telmisartan",
+    "Product Code": "SGH",
+    "Strength": "40mg, 80mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 174,
+    "Product Name": "Tenofovir Alafenamide Hemi fumarate",
+    "Product Code": "SGH",
+    "Strength": "25mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 175,
+    "Product Name": "Tenofovir Disoproxil Fumarate",
+    "Product Code": "SGH",
+    "Strength": "300mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 176,
+    "Product Name": "Terbinafine",
+    "Product Code": "SGH",
+    "Strength": "250mg, 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 177,
+    "Product Name": "Tetracycline",
+    "Product Code": "SGH",
+    "Strength": "250mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 178,
+    "Product Name": "Thiamine (Vitamin B1)",
+    "Product Code": "SRV",
+    "Strength": "50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 179,
+    "Product Name": "Thioguanine",
+    "Product Code": "KWT",
+    "Strength": "40 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 180,
+    "Product Name": "Thioridazine",
+    "Product Code": "ARN",
+    "Strength": "100 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 181,
+    "Product Name": "Tolperisone",
+    "Product Code": "SGH",
+    "Strength": "150mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 182,
+    "Product Name": "Tramadol",
+    "Product Code": "SRV",
+    "Strength": "50 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 183,
+    "Product Name": "Tramadol & Acetaminophen",
+    "Product Code": "SGH",
+    "Strength": "37.5mg + 325mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 184,
+    "Product Name": "Tranexamic Acid",
+    "Product Code": "SGH",
+    "Strength": "500 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 185,
+    "Product Name": "Trifluoperazine",
+    "Product Code": "FC",
+    "Strength": "5 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 186,
+    "Product Name": "Trypsin Chymotrypsin",
+    "Product Code": "SGH",
+    "Strength": "",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 187,
+    "Product Name": "Valproic Acid",
+    "Product Code": "SGH",
+    "Strength": "150,200,250,400,500 CR",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 188,
+    "Product Name": "Valsartan",
+    "Product Code": "SGH",
+    "Strength": "160mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 189,
+    "Product Name": "Valsartan & Hydrochlorothiazide",
+    "Product Code": "SGH",
+    "Strength": "160mg + 12.5mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 190,
+    "Product Name": "Verapamil",
+    "Product Code": "FC",
+    "Strength": "80 mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 191,
+    "Product Name": "Vildagliptin",
+    "Product Code": "SGH",
+    "Strength": "50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 192,
+    "Product Name": "Vildagliptin & Metformin",
+    "Product Code": "SGH",
+    "Strength": "50mg + 1000mg, 50mg + 500mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 193,
+    "Product Name": "Vitamin B6",
+    "Product Code": "SGH",
+    "Strength": "25mg, 50mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 194,
+    "Product Name": "Vitamin D3 Chewable Tablet",
+    "Product Code": "SGH",
+    "Strength": "500000 IU",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 195,
+    "Product Name": "Zinc Sulphate Tablet",
+    "Product Code": "SGH",
+    "Strength": "20mg",
+    "Dosage form": "Tablet"
+  },
+  {
+    "Sr.No.": 196,
+    "Product Name": "Zolpidem",
+    "Product Code": "SGH",
+    "Strength": "10mg",
+    "Dosage form": "Tablet"
+  }
+
+        
+] 
+].flat();
+       
+    const itemsPerPage = 10; // Number of items per page
+    let currentPage = 1;
+
+    // Function to render the data
+    function renderProductList(filterText = "", page = 1) {
+        const productListContainer = document.getElementById('product-list');
+        productListContainer.innerHTML = ""; // Clear previous content
+
+        // Filter products based on search text
+        const filteredProducts = productData.filter(product =>
+            Object.values(product).some(value =>
+                String(value).toLowerCase().includes(filterText.toLowerCase())
+            )
+        );
+
+        // Paginate the filtered products
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+
+        // Render the products
+        if (paginatedProducts.length === 0) {
+            productListContainer.innerHTML = "<p class='text-center text-gray-500'>No products found.</p>";
+        } else {
+            const table = document.createElement('table');
+            table.className = 'min-w-full bg-white shadow-md rounded-lg';
+
+            // Table header
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            for (const key of Object.keys(productData[0])) {
+                const th = document.createElement('th');
+                th.className = 'py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider';
+                th.textContent = key;
+                headerRow.appendChild(th);
+            }
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Table body
+            const tbody = document.createElement('tbody');
+            for (const product of paginatedProducts) {
+                const row = document.createElement('tr');
+                for (const value of Object.values(product)) {
+                    const td = document.createElement('td');
+                    td.className = 'py-2 px-4 border-b border-gray-200 text-sm text-gray-700';
+                    td.textContent = value;
+                    row.appendChild(td);
+                }
+                tbody.appendChild(row);
+            }
+            table.appendChild(tbody);
+
+            productListContainer.appendChild(table);
+        }
+
+        // Update pagination controls
+        updatePaginationControls(filteredProducts.length, page);
+    }
+
+    // Function to update pagination controls
+    function updatePaginationControls(totalItems, currentPage) {
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const pageInfo = document.getElementById('pageInfo');
+        const prevPageButton = document.getElementById('prevPage');
+        const nextPageButton = document.getElementById('nextPage');
+
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        prevPageButton.disabled = currentPage === 1;
+        nextPageButton.disabled = currentPage === totalPages;
+    }
+
+    // Event listener for search input
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', (event) => {
+        currentPage = 1; // Reset to first page when searching
+        renderProductList(event.target.value, currentPage);
+    });
+
+    // Event listener for previous page button
+    document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderProductList(searchInput.value, currentPage);
+        }
+    });
+
+    // Event listener for next page button
+    document.getElementById('nextPage').addEventListener('click', () => {
+        const totalItems = productData.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderProductList(searchInput.value, currentPage);
+        }
+    });
+
+    // Initial render
+    renderProductList();
+
+    document.getElementById('dropdownNavbarLink').addEventListener('click', function() {
+        const dropdown = document.getElementById('dropdownNavbar');
+        dropdown.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

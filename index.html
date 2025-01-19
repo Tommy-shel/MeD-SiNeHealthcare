@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Dropdown menu positioning */
+        #dropdownNavbar {
+          position: absolute;
+          top: 100%; /* Position below the dropdown button */
+          left: 0;
+          z-index: 1000; /* Ensure it appears above other content */
+        }
+      </style>
+</head>
+<body >
+   
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
+   
+
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+          
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+       
+        <ul class="flex flex-col  font-semibold text-xl p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <div class="flex items-center w-30 ">
+            <img src="./WhatsApp Image 2025-01-19 at 9.42.51 AM.jpeg" alt="Logo" class="h-20  mr-4 rounded-full">
+        </div>
+          <li>
+            <a href="index.html" class="ml-40 px-7  mt-2 block py-2  text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li class="relative">
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between mt-2 w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Products <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="./injection.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Injections</a>
+                    </li>
+                    <li>
+                      <a href="Capsules.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Capsules</a>
+                    </li>
+                    <li>
+                      <a href="Creams.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Creams</a>
+                    </li>
+                    <li>
+                        <a href="Medical-Devices.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Medical Devices</a>
+                      </li>
+                      <li>
+                        <a href="Syrups.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Syrups</a>
+                      </li>
+                      <li>
+                        <a href="Tablets.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tablets</a>
+                      </li>
+                      <li>
+                        <a href="injection-lvp.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Injections lvp</a>
+                      </li>
+                      <li>
+                        <a href="oncology.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Oncology Products</a>
+                      </li>
+              </div>
+          </li>
+          <li>
+            <a href="#" class=" mt-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          </li>
+         
+          <li>
+            <a href="#" class="mt-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+          </li>
+          <a href="about-us.html" class="mt-2 block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- component -->
+<head>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+      var cont=0;
+  function loopSlider(){
+    var xx= setInterval(function(){
+          switch(cont)
+          {
+          case 0:{
+              $("#slider-1").fadeOut(400);
+              $("#slider-2").delay(400).fadeIn(400);
+              $("#sButton1").removeClass("bg-purple-800");
+              $("#sButton2").addClass("bg-purple-800");
+          cont=1;
+          
+          break;
+          }
+          case 1:
+          {
+          
+              $("#slider-2").fadeOut(400);
+              $("#slider-1").delay(400).fadeIn(400);
+              $("#sButton2").removeClass("bg-purple-800");
+              $("#sButton1").addClass("bg-purple-800");
+             
+          cont=0;
+          
+          break;
+          }
+          
+          
+          }},8000);
+  
+  }
+  
+  function reinitLoop(time){
+  clearInterval(xx);
+  setTimeout(loopSlider(),time);
+  }
+  
+  
+  
+  function sliderButton1(){
+  
+      $("#slider-2").fadeOut(400);
+      $("#slider-1").delay(400).fadeIn(400);
+      $("#sButton2").removeClass("bg-purple-800");
+      $("#sButton1").addClass("bg-purple-800");
+      reinitLoop(4000);
+      cont=0
+      
+      }
+      
+      function sliderButton2(){
+      $("#slider-1").fadeOut(400);
+      $("#slider-2").delay(400).fadeIn(400);
+      $("#sButton1").removeClass("bg-purple-800");
+      $("#sButton2").addClass("bg-purple-800");
+      reinitLoop(4000);
+      cont=1
+      
+      }
+  
+      $(window).ready(function(){
+          $("#slider-2").hide();
+          $("#sButton1").addClass("bg-purple-800");
+          
+  
+          loopSlider();
+       
+          
+      
+      
+      
+      
+      });
+  
+    
+    </script>
+  </head>
+  
+  <body>
+    <div class="sliderAx h-auto ">
+        <div id="slider-1" class="container mx-auto">
+          <div class="bg-cover bg-center  min-h-screen text-indigo-400 py-24 px-10 object-fill" style="background-image: url(./medicine.jpg)">
+         <div class="md:w-1/2">
+          <p class="font-bold text-sm uppercase ">Services</p>
+          <p class="text-3xl font-bold">Hello world</p>
+          <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
+          <a href="Contact-us.html" class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact us</a>
+          </div>  
+      </div> <!-- container -->
+        <br>
+        </div>
+  
+        <div id="slider-2" class="container mx-auto">
+          <div class="bg-cover bg-top  min-h-screen text-indigo-400 py-24 px-10 object-fill" style="background-image: url(./med.jpg)">
+         
+    <p class="font-bold text-sm uppercase">Services</p>
+          <p class="text-3xl font-bold">Hello world</p>
+          <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
+          <a href="#" class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact us</a>
+           
+      </div> <!-- container -->
+        <br>
+        </div>
+      </div>
+   <div  class="flex justify-between w-12 mx-auto pb-2">
+          <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 " ></button>
+      <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+    </div>
+  
+  </body>
+  <script>
+    document.getElementById('dropdownNavbarLink').addEventListener('click', function() {
+        const dropdown = document.getElementById('dropdownNavbar');
+        dropdown.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>

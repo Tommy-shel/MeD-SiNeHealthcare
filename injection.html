@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medisine Product List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Dropdown menu positioning */
+        #dropdownNavbar {
+          position: absolute;
+          top: 100%; /* Position below the dropdown button */
+          left: 0;
+          z-index: 1000; /* Ensure it appears above other content */
+        }
+    </style>
+</head>
+<body >
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+                <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+            </li>
+            <li class="relative">
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                            <a href="./injection.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Injections</a>
+                        </li>
+                        <li>
+                            <a href="Capsules.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Capsules</a>
+                        </li>
+                        <li>
+                            <a href="Creams.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Creams</a>
+                        </li>
+                        <li>
+                            <a href="Medical-Devices.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Medical Devices</a>
+                        </li>
+                        <li>
+                            <a href="Syrups.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Syrups</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tablets</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Injections lvp</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Oncology Products</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mx-auto">
+    <!-- Search Bar -->
+    <div class="flex justify-between items-center mt-2 mb-8">
+        <h1 class="text-3xl font-bold ml-20 pl-20 ">Injection List</h1>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+    </div>
+
+    <!-- Product List Container -->
+    <div id="product-list" class="mt-1 ml-20 mr-20 pr-5 space-y-8"></div>
+
+    <!-- Pagination Controls -->
+    <div id="pagination" class="flex justify-center mt-8 space-x-2">
+        <button id="prevPage" class="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300">Previous</button>
+        <span id="pageInfo" class="px-4 py-2">Page 1 of 1</span>
+        <button id="nextPage" class="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300">Next</button>
+    </div>
+</div>
+
+<script>
+    // JSON data (10 items)
+    const productData =  [
+    {
+        "Sr.No.": 2,
+        "Product Name": "Adrenaline (Epinephrine) (IV, IM, SC, Nebulization)",
+        "Product Code": "SJ",
+        "Strength": "1 mg/1mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 4,
+        "Product Name": "Amikacin",
+        "Product Code": "",
+        "Strength": "100 mg/2 ml",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 5,
+        "Product Name": "Amikacin",
+        "Product Code": "",
+        "Strength": "50 mg/ml, 125 mg/ml, 250 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 8,
+        "Product Name": "Amlodipine",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 9,
+        "Product Name": "Ampicillin (IV)",
+        "Product Code": "OB",
+        "Strength": "500 mg",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 10,
+        "Product Name": "Ascorbic Acid (Vitamin C)",
+        "Product Code": "",
+        "Strength": "100 mg/ml, 250 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 12,
+        "Product Name": "Atracurium Amp. (IV)",
+        "Product Code": "",
+        "Strength": "10mg",
+        "Dosage form": "Injection",
+        "Pack Size": "2.5 ml"
+    },
+    {
+        "Sr.No.": 13,
+        "Product Name": "Atropine Sulphate",
+        "Product Code": "",
+        "Strength": "0.6 mg/ml, 1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 14,
+        "Product Name": "Atropine Sulphate",
+        "Product Code": "",
+        "Strength": "0.6 mg/ml, 1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 15,
+        "Product Name": "Azacitidin lyophilisate",
+        "Product Code": "",
+        "Strength": "10 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 16,
+        "Product Name": "Azacitidine (IV; SC)",
+        "Product Code": "",
+        "Strength": "100mg",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 17,
+        "Product Name": "Azacitidine",
+        "Product Code": "",
+        "Strength": "100 mg/Vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 18,
+        "Product Name": "Benzathine Penicillin (deep IM)",
+        "Product Code": "INJ",
+        "Strength": "2.4 million IU (1.44 g)",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 19,
+        "Product Name": "Betamethasone",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 20,
+        "Product Name": "Betamethasone Phosphate",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 21,
+        "Product Name": "Betamethasone Sodium Phosphate",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 22,
+        "Product Name": "Biperiden (IM; IV)",
+        "Product Code": "KWT",
+        "Strength": "5mg/1mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 23,
+        "Product Name": "Biphasic-acting insulin - Soluble human insulin + Isophan human insulin  (SC)",
+        "Product Code": "MJB",
+        "Strength": "30%+70%",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 24,
+        "Product Name": "Bivalirudin lyophilisate",
+        "Product Code": "",
+        "Strength": "250 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 27,
+        "Product Name": "Bupivacaine + Injectable Adrenaline Bupivacaine + Adrenaline 1:200,000 (cork vial)",
+        "Product Code": "KWT",
+        "Strength": "100 mg/20 ml / 1:200,000",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 28,
+        "Product Name": "Bupivacaine with glucose, ampoule",
+        "Product Code": "KWT",
+        "Strength": "0.5%+7.5%",
+        "Dosage form": "Injection",
+        "Pack Size": "4 ml"
+    },
+    {
+        "Sr.No.": 29,
+        "Product Name": "Bupivacaine HC1 In Dextrose",
+        "Product Code": "",
+        "Strength": "5 mg+80 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 30,
+        "Product Name": "Bupivacaine Hydrochloride",
+        "Product Code": "",
+        "Strength": "2.5 mg/ml, 5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 31,
+        "Product Name": "Bupivacaine",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 32,
+        "Product Name": "Bupivacaine, Hydrochloride (epidural, perineural)",
+        "Product Code": "KWT",
+        "Strength": "100 mg/20mL",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 33,
+        "Product Name": "Buprenorphine Hydrochloride",
+        "Product Code": "",
+        "Strength": "0.3 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 34,
+        "Product Name": "Buprenorphine",
+        "Product Code": "",
+        "Strength": "0.3 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 35,
+        "Product Name": "Calcium Disodium Edetate",
+        "Product Code": "",
+        "Strength": "200 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 36,
+        "Product Name": "Calcium Folinate (Folinic Acid) (IV)",
+        "Product Code": "",
+        "Strength": "10mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "30 ml"
+    },
+    {
+        "Sr.No.": 37,
+        "Product Name": "Calcium Gluconate",
+        "Product Code": "",
+        "Strength": "10 % w/v",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 38,
+        "Product Name": "Carbetocin",
+        "Product Code": "",
+        "Strength": "100 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 40,
+        "Product Name": "Carfilzomib",
+        "Product Code": "",
+        "Strength": "60 mg/Vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 41,
+        "Product Name": "Caspofungin Lyophilisate",
+        "Product Code": "",
+        "Strength": "50 mg, 70 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 42,
+        "Product Name": "Cefamandole Nafate",
+        "Product Code": "",
+        "Strength": "1.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 43,
+        "Product Name": "Cefepime powder",
+        "Product Code": "",
+        "Strength": "500 mg, 1.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 44,
+        "Product Name": "Ceferon DJ (Cefoperazone powder for IV and IM admin.)",
+        "Product Code": "",
+        "Strength": "1.0 g, 2.0 g",
+        "Dosage form": "Powder for Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 45,
+        "Product Name": "Cefoperazone and Sulbactam",
+        "Product Code": "",
+        "Strength": "1 g + 1 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 46,
+        "Product Name": "Cefoperazone",
+        "Product Code": "",
+        "Strength": "1.0 g, 2.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 47,
+        "Product Name": "Cefotaxime Sodium",
+        "Product Code": "",
+        "Strength": "250 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 48,
+        "Product Name": "Cefotiam",
+        "Product Code": "",
+        "Strength": "1.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 49,
+        "Product Name": "Ceftazidine",
+        "Product Code": "OSF",
+        "Strength": "1g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 50,
+        "Product Name": "Ceftizoxime",
+        "Product Code": "",
+        "Strength": "1.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 51,
+        "Product Name": "Ceftriaxone",
+        "Product Code": "",
+        "Strength": "1 g/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 52,
+        "Product Name": "Ceftriaxone powder",
+        "Product Code": "",
+        "Strength": "500 mg, 1.0 g, 2.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 53,
+        "Product Name": "Ceftriaxone Sodium",
+        "Product Code": "",
+        "Strength": "1 g/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 54,
+        "Product Name": "Cefuroxime",
+        "Product Code": "",
+        "Strength": "1.5 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 55,
+        "Product Name": "Cefuroxime",
+        "Product Code": "",
+        "Strength": "750 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 56,
+        "Product Name": "Cefuroxime powder for preparation for IV and IM admin.",
+        "Product Code": "",
+        "Strength": "750 mg, 1500 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 57,
+        "Product Name": "Cefuroxime Sodium",
+        "Product Code": "",
+        "Strength": "750 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 58,
+        "Product Name": "Cephalothin",
+        "Product Code": "",
+        "Strength": "1.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 59,
+        "Product Name": "Cetuximab",
+        "Product Code": "",
+        "Strength": "5mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 60,
+        "Product Name": "Chlordiazepoxide Hydrochloride",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 61,
+        "Product Name": "Chlordiazepoxide",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 62,
+        "Product Name": "Chlorpromazine (Hydrochloride)",
+        "Product Code": "KWT",
+        "Strength": "25 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 63,
+        "Product Name": "Chlorpromazine for",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 65,
+        "Product Name": "Chlorpromazine",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 66,
+        "Product Name": "Cholecalciferol (Vitamin D3 inj 300000 IU)",
+        "Product Code": "",
+        "Strength": "7.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 67,
+        "Product Name": "Cholecalciferol (Vitamin D3 inj 600000 IU)",
+        "Product Code": "",
+        "Strength": "15 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 68,
+        "Product Name": "Ciprofloxacin (IV)",
+        "Product Code": "DJL",
+        "Strength": "2 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 69,
+        "Product Name": "Ciprofloxacin Lactate",
+        "Product Code": "",
+        "Strength": "100 mg/5 ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 71,
+        "Product Name": "Clindamycin",
+        "Product Code": "",
+        "Strength": "150 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 72,
+        "Product Name": "Clindamycin Phosphate",
+        "Product Code": "",
+        "Strength": "300 mg/2 ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 73,
+        "Product Name": "Clonidine",
+        "Product Code": "",
+        "Strength": "150 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 74,
+        "Product Name": "Cyclophosphamide (IV)",
+        "Product Code": "FHC",
+        "Strength": "20 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "25 ml"
+    },
+    {
+        "Sr.No.": 75,
+        "Product Name": "Cyclophosphamide",
+        "Product Code": "",
+        "Strength": "200 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 78,
+        "Product Name": "Dacarbazine (IV)",
+        "Product Code": "",
+        "Strength": "5 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 79,
+        "Product Name": "Dactinomycin (IV)",
+        "Product Code": "",
+        "Strength": "20 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 80,
+        "Product Name": "Daunorubicin (IV)",
+        "Product Code": "",
+        "Strength": "10 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 81,
+        "Product Name": "Dexamethasone",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 82,
+        "Product Name": "Dexamethasone Phosphate",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 83,
+        "Product Name": "Dexamethasone Sodium Phosphate",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 84,
+        "Product Name": "Diatrizoate Meglumine and Diatrizoate sodium",
+        "Product Code": "",
+        "Strength": "760 mgI/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 85,
+        "Product Name": "Diazepam (IV)",
+        "Product Code": "RDP",
+        "Strength": "10 mg/2mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 86,
+        "Product Name": "Diazepam",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 87,
+        "Product Name": "Diclofenac Sodium",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 88,
+        "Product Name": "Dicyclomine Hydrochloride",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 89,
+        "Product Name": "Digoxin (IV; IM)",
+        "Product Code": "",
+        "Strength": "250 mcg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 90,
+        "Product Name": "Digoxin",
+        "Product Code": "KWT",
+        "Strength": "0.25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 91,
+        "Product Name": "Diltiazem",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 92,
+        "Product Name": "Dimercaprol",
+        "Product Code": "",
+        "Strength": "100 mg/ml, 50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 93,
+        "Product Name": "Diphenhydramine (IV, IM)",
+        "Product Code": "SJ",
+        "Strength": "10 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 94,
+        "Product Name": "Disodium Edetate",
+        "Product Code": "",
+        "Strength": "150 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 95,
+        "Product Name": "Dobutamine Hydrochloride",
+        "Product Code": "",
+        "Strength": "12.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 96,
+        "Product Name": "Dobutamine",
+        "Product Code": "",
+        "Strength": "12.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 99,
+        "Product Name": "Dopamine Hydrochloride",
+        "Product Code": "",
+        "Strength": "40 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 100,
+        "Product Name": "Dopamine",
+        "Product Code": "",
+        "Strength": "40 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 101,
+        "Product Name": "Doxorubicin HCl",
+        "Product Code": "",
+        "Strength": "10 mg/vial, 50 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 102,
+        "Product Name": "Doxorubicin HCl",
+        "Product Code": "",
+        "Strength": "2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 103,
+        "Product Name": "Drotaverine",
+        "Product Code": "",
+        "Strength": "40 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 104,
+        "Product Name": "Enalaprilat",
+        "Product Code": "",
+        "Strength": "1.25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 105,
+        "Product Name": "Enoxaparin solution",
+        "Product Code": "",
+        "Strength": "10,000 anti",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 106,
+        "Product Name": "Ephedrine (IV)",
+        "Product Code": "FFR",
+        "Strength": "50mg",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 107,
+        "Product Name": "Ephedrine Hydrochloride",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 109,
+        "Product Name": "Epinephrine",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 111,
+        "Product Name": "Ergometrine",
+        "Product Code": "",
+        "Strength": "200 mcg",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 112,
+        "Product Name": "Ergometrine",
+        "Product Code": "",
+        "Strength": "0.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 113,
+        "Product Name": "Ergometrine",
+        "Product Code": "",
+        "Strength": "0.2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 114,
+        "Product Name": "Ergometrine Maleate",
+        "Product Code": "",
+        "Strength": "0.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 115,
+        "Product Name": "Ergometrine Maleate",
+        "Product Code": "",
+        "Strength": "0.2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 116,
+        "Product Name": "Ergometrine Maleate",
+        "Product Code": "",
+        "Strength": "0.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 119,
+        "Product Name": "Factor VIII concentrate (IV)",
+        "Product Code": "",
+        "Strength": "50 IU/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 120,
+        "Product Name": "Fentanyl (IV)",
+        "Product Code": "FFR",
+        "Strength": "50mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 121,
+        "Product Name": "Ferric Carboxymaltose",
+        "Product Code": "",
+        "Strength": "50 mgFe/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 122,
+        "Product Name": "Filgrastrim (pre-filled syringe)  (SC)",
+        "Product Code": "",
+        "Strength": "300mcg/0.5mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 123,
+        "Product Name": "Fluconazole (IV)",
+        "Product Code": "RCL",
+        "Strength": "2 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 124,
+        "Product Name": "Fludarabine(IV)",
+        "Product Code": "FHC",
+        "Strength": "25mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 125,
+        "Product Name": "Flumazenil",
+        "Product Code": "",
+        "Strength": "0.1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 126,
+        "Product Name": "Fluorouracil Amp. (IV)",
+        "Product Code": "",
+        "Strength": "50mg/ mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 127,
+        "Product Name": "Fluphenazine Decanoate (IM)",
+        "Product Code": "SJ",
+        "Strength": "25mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 128,
+        "Product Name": "Fluphenazine",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 129,
+        "Product Name": "Fosfomycin powder for IV administration",
+        "Product Code": "",
+        "Strength": "0.5 g, 1.0 g, 2.0 g, 3.0 g, 4.0 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 130,
+        "Product Name": "Fosphenytoin",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 131,
+        "Product Name": "Fosphenytoin Sodium",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 133,
+        "Product Name": "Furosemide",
+        "Product Code": "",
+        "Strength": "10 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 134,
+        "Product Name": "Gadopentetate Dimeglumine",
+        "Product Code": "",
+        "Strength": "0.5 mmol/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 135,
+        "Product Name": "Gadoterate Meglumine",
+        "Product Code": "",
+        "Strength": "0.5 mmol/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 137,
+        "Product Name": "Gemcitabine\n(IV)",
+        "Product Code": "",
+        "Strength": "1000 mg",
+        "Dosage form": "Injection",
+        "Pack Size": "50 ml"
+    },
+    {
+        "Sr.No.": 138,
+        "Product Name": "Gentamicin",
+        "Product Code": "",
+        "Strength": "40 mg/ml, 10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 139,
+        "Product Name": "Glucagon (SC; IM; IV)",
+        "Product Code": "KWT",
+        "Strength": "1 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 1,
+        "Product Name": "Glucose",
+        "Product Code": "BAH",
+        "Strength": "6g/20mL / 30%",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 140,
+        "Product Name": "Glycopyrrolate",
+        "Product Code": "",
+        "Strength": "0.2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 141,
+        "Product Name": "Goserelin Prefilled Syringe(SC)",
+        "Product Code": "",
+        "Strength": "10.8 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 142,
+        "Product Name": "Granisetron",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 143,
+        "Product Name": "Haloperidol (Decanoate)",
+        "Product Code": "KWT",
+        "Strength": "50 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 144,
+        "Product Name": "Haloperidol  (IV; IM)",
+        "Product Code": "RDP",
+        "Strength": "5 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 145,
+        "Product Name": "Haloperidol",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 146,
+        "Product Name": "Heparin Sodium",
+        "Product Code": "",
+        "Strength": "1000 IU/ml, 5000 IU/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 147,
+        "Product Name": "Heparin solution",
+        "Product Code": "",
+        "Strength": "5000 IU/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 148,
+        "Product Name": "Hydralazine (IV, IM)",
+        "Product Code": "RDP",
+        "Strength": "20 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 149,
+        "Product Name": "Hydralazine Hydrochloride",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 150,
+        "Product Name": "Hydralazine",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 151,
+        "Product Name": "Hydrocortisone(IV; IM)",
+        "Product Code": "OL",
+        "Strength": "100 mg/10mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 152,
+        "Product Name": "Hydrocortisone Sodium Phosphate",
+        "Product Code": "",
+        "Strength": "100 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 153,
+        "Product Name": "Hydrocortisone Sodium Succinate",
+        "Product Code": "",
+        "Strength": "100 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 154,
+        "Product Name": "Hydrocortisone Sodium Succinate",
+        "Product Code": "",
+        "Strength": "500 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 155,
+        "Product Name": "Hydroxycobalamin (Vitamin B12)  (IV; IM)",
+        "Product Code": "KWT",
+        "Strength": "1mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 156,
+        "Product Name": "Hyoscine Butyl Bromide",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 157,
+        "Product Name": "Icatibant solution for subcutaneous administration",
+        "Product Code": "",
+        "Strength": "10 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 158,
+        "Product Name": "Ifosfamide (IV)",
+        "Product Code": "FHC",
+        "Strength": "1g",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 159,
+        "Product Name": "Vitamin B",
+        "Product Code": "SRV",
+        "Strength": "Complex",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 160,
+        "Product Name": "Intermediate-acting insulin - Isophan human insulin (NPH) (SC)",
+        "Product Code": "MJB",
+        "Strength": "100 IU/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 161,
+        "Product Name": "Irinotecan concentrate for solution for infusion",
+        "Product Code": "",
+        "Strength": "20 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 162,
+        "Product Name": "Iron Dextran",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 163,
+        "Product Name": "Iron Sucrose",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 164,
+        "Product Name": "Isoproterenol",
+        "Product Code": "",
+        "Strength": "0.2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 165,
+        "Product Name": "Isoxsuprine",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 166,
+        "Product Name": "KEFSEPIM (Cefepime powder for IV and IM admin.)",
+        "Product Code": "",
+        "Strength": "1.0 g",
+        "Dosage form": "Powder for Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 167,
+        "Product Name": "Ketamine Hydrochloride",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 168,
+        "Product Name": "Ketamine",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 169,
+        "Product Name": "Ketorolac Tromethamine",
+        "Product Code": "",
+        "Strength": "30 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 170,
+        "Product Name": "Labetalol (IV)",
+        "Product Code": "KWT",
+        "Strength": "5 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 172,
+        "Product Name": "Lidocaine Hydrochloride",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 173,
+        "Product Name": "Lidocaine",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 174,
+        "Product Name": "Lignocaine & Adrenaline",
+        "Product Code": "",
+        "Strength": "1:200000; 1:100000; 1:80000",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 175,
+        "Product Name": "Lignocaine Hydrochloride",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 176,
+        "Product Name": "Lincomycin",
+        "Product Code": "",
+        "Strength": "300 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 177,
+        "Product Name": "Long-acting recombinant human insulin analogue (Insulin glargine) (SC)",
+        "Product Code": "",
+        "Strength": "100 IU/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 178,
+        "Product Name": "Lorazepam",
+        "Product Code": "",
+        "Strength": "4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 179,
+        "Product Name": "Lorazepam",
+        "Product Code": "",
+        "Strength": "2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 181,
+        "Product Name": "Magnesium Sulfate",
+        "Product Code": "SJ",
+        "Strength": "500mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 183,
+        "Product Name": "Meropenem",
+        "Product Code": "OSF",
+        "Strength": "1g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 184,
+        "Product Name": "Mesna",
+        "Product Code": "OB",
+        "Strength": "100 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 185,
+        "Product Name": "Metaraminol Bitartrate",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 186,
+        "Product Name": "Metaraminol",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 187,
+        "Product Name": "Methotrexate (IV)",
+        "Product Code": "FHC",
+        "Strength": "25 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 188,
+        "Product Name": "Methotrexate",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 189,
+        "Product Name": "Methyl Prednisolone Acetate",
+        "Product Code": "",
+        "Strength": "40 mg/ml, 80 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 190,
+        "Product Name": "Methylcobalamine",
+        "Product Code": "",
+        "Strength": "500 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 191,
+        "Product Name": "Methyldopa",
+        "Product Code": "",
+        "Strength": "250 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 192,
+        "Product Name": "Methylergometrine",
+        "Product Code": "",
+        "Strength": "0.2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 193,
+        "Product Name": "Methylergometrine Maleate",
+        "Product Code": "",
+        "Strength": "0.2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 194,
+        "Product Name": "Methylprednisolone",
+        "Product Code": "",
+        "Strength": "40 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 195,
+        "Product Name": "Metoclopramide Hydrochloride",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 196,
+        "Product Name": "Metoprolol",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 197,
+        "Product Name": "Metronidazole",
+        "Product Code": "",
+        "Strength": "500 mg/100 ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 198,
+        "Product Name": "Micafungin lyophilisate",
+        "Product Code": "",
+        "Strength": "50 mg, 100 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 199,
+        "Product Name": "Midazolam",
+        "Product Code": "KWT",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": "3 ml"
+    },
+    {
+        "Sr.No.": 200,
+        "Product Name": "Midazolam",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 201,
+        "Product Name": "Misoprostol",
+        "Product Code": "",
+        "Strength": "200 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 202,
+        "Product Name": "Misoprostol",
+        "Product Code": "",
+        "Strength": "200 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 203,
+        "Product Name": "Mitomycin C (IV)",
+        "Product Code": "",
+        "Strength": "10 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 204,
+        "Product Name": "Naloxone (IV; IV infusion; SC;IM)",
+        "Product Code": "KBS",
+        "Strength": "400mcg",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 205,
+        "Product Name": "Naloxone Hydrochloride",
+        "Product Code": "",
+        "Strength": "0.4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 206,
+        "Product Name": "Naloxone",
+        "Product Code": "",
+        "Strength": "0.4 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 207,
+        "Product Name": "Nandrolone(IM)",
+        "Product Code": "",
+        "Strength": "50mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 208,
+        "Product Name": "Neostigmine Bromide",
+        "Product Code": "KWT",
+        "Strength": "0.5mg/m",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 209,
+        "Product Name": "Neostigmine",
+        "Product Code": "",
+        "Strength": "2.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 210,
+        "Product Name": "Neostigmine Methyl Sulphate",
+        "Product Code": "",
+        "Strength": "2.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 211,
+        "Product Name": "Nicotinamide",
+        "Product Code": "",
+        "Strength": "100 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 212,
+        "Product Name": "Nifedipine",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 213,
+        "Product Name": "Noradrenaline",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 214,
+        "Product Name": "Noradrenaline (Sterile Noradrenaline Concentrate)",
+        "Product Code": "",
+        "Strength": "2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 215,
+        "Product Name": "Novatrizoate (Sodium Amidotrizoate solution)",
+        "Product Code": "",
+        "Strength": "760 mgI/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 216,
+        "Product Name": "Ofloxacin",
+        "Product Code": "",
+        "Strength": "200 mg/100 ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 217,
+        "Product Name": "Omeprazole",
+        "Product Code": "SJ",
+        "Strength": "40 mg",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 218,
+        "Product Name": "Ondansetron",
+        "Product Code": "",
+        "Strength": "2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 219,
+        "Product Name": "ORITAX (Cefotaxime Sodium for IV and IM admin.)",
+        "Product Code": "",
+        "Strength": "1000 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 221,
+        "Product Name": "Oxytocin (IV; IM)",
+        "Product Code": "RDP",
+        "Strength": "10 IU/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "1 ml"
+    },
+    {
+        "Sr.No.": 222,
+        "Product Name": "Oxytocin",
+        "Product Code": "",
+        "Strength": "10 IU/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 223,
+        "Product Name": "Paclitaxel + Albumin lyophilisate",
+        "Product Code": "",
+        "Strength": "100 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 227,
+        "Product Name": "Pancuronium(IV; IM)",
+        "Product Code": "RDP",
+        "Strength": "4mg/2mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 226,
+        "Product Name": "Pancuronium Bromide",
+        "Product Code": "",
+        "Strength": "2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 228,
+        "Product Name": "Pancuronium",
+        "Product Code": "",
+        "Strength": "2 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 229,
+        "Product Name": "Paracetamol",
+        "Product Code": "",
+        "Strength": "150 mg/ml, 150 mg/2 ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 230,
+        "Product Name": "Pentazocine",
+        "Product Code": "",
+        "Strength": "30 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 231,
+        "Product Name": "Pentazocine Lactate",
+        "Product Code": "",
+        "Strength": "30 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 232,
+        "Product Name": "Pethidine (IV; IM)",
+        "Product Code": "FFR",
+        "Strength": "50mg/1mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 233,
+        "Product Name": "Pheniramine Maleate",
+        "Product Code": "",
+        "Strength": "22.75 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 234,
+        "Product Name": "Phenobarbital  (IV)",
+        "Product Code": "RDP",
+        "Strength": "200 mg/2mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 235,
+        "Product Name": "Phenobarbitone",
+        "Product Code": "",
+        "Strength": "60 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 236,
+        "Product Name": "Phenytoin(IV)",
+        "Product Code": "RDP",
+        "Strength": "250mg/5mL",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 237,
+        "Product Name": "Piperacillin + Tazobactam",
+        "Product Code": "OSF",
+        "Strength": "4g + 0.5g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 238,
+        "Product Name": "Piroxicam",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 239,
+        "Product Name": "Potassium chloride 1g (13.6mEq of K+/amp.) 10% (EV)",
+        "Product Code": "",
+        "Strength": "1g",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 240,
+        "Product Name": "Potassium Chloride Concentrate",
+        "Product Code": "",
+        "Strength": "7.5% w/v",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 241,
+        "Product Name": "Potassium Chloride",
+        "Product Code": "",
+        "Strength": "15% w/v",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 242,
+        "Product Name": "Prednisolone",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 243,
+        "Product Name": "Prednisolone Phosphate",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 244,
+        "Product Name": "Prednisolone Sodium Phosphate",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 245,
+        "Product Name": "Promethazine (IM)",
+        "Product Code": "OB",
+        "Strength": "25mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 246,
+        "Product Name": "Promethazine Hydrochloride",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 247,
+        "Product Name": "Propofol (IV)",
+        "Product Code": "",
+        "Strength": "10mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 248,
+        "Product Name": "Propranolol",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 249,
+        "Product Name": "Prostaglandin E2",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 250,
+        "Product Name": "Prostaglandin F2 Alpha",
+        "Product Code": "",
+        "Strength": "5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 251,
+        "Product Name": "Protamine,(IV; IM)",
+        "Product Code": "",
+        "Strength": "10mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 252,
+        "Product Name": "Pyridine Aldoxime Methiodide",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 254,
+        "Product Name": "Ranitidine",
+        "Product Code": "",
+        "Strength": "25 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 255,
+        "Product Name": "Remedisvir",
+        "Product Code": "",
+        "Strength": "100 mg/20 mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 256,
+        "Product Name": "Ropivacaine Hydrochloride",
+        "Product Code": "",
+        "Strength": "7.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 257,
+        "Product Name": "Salbutamol (IV; IM)",
+        "Product Code": "FFR",
+        "Strength": "0.5 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "5 ml"
+    },
+    {
+        "Sr.No.": 258,
+        "Product Name": "Salbutamol Sulphate",
+        "Product Code": "",
+        "Strength": "500 mcg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 259,
+        "Product Name": "Short-acting insulin - Soluble human insulin (IV; IM; SC)",
+        "Product Code": "MJB",
+        "Strength": "100 IU/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 260,
+        "Product Name": "Sodium bicarbonate  (IV)",
+        "Product Code": "",
+        "Strength": "8.40%",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 261,
+        "Product Name": "Sodium Bicarbonate",
+        "Product Code": "SJ",
+        "Strength": "8.4% w/v",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 262,
+        "Product Name": "Sodium Bicarbonate",
+        "Product Code": "",
+        "Strength": "7.5% w/v",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 263,
+        "Product Name": "Sodium Chloride",
+        "Product Code": "DJL",
+        "Strength": "0.9% w/v",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 264,
+        "Product Name": "Sodium Nitroprusside",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 265,
+        "Product Name": "Sodium nitroprusside Lyophilisate",
+        "Product Code": "",
+        "Strength": "30 mg",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 266,
+        "Product Name": "Sulfadiazine (IV; IM)",
+        "Product Code": "",
+        "Strength": "500 mg",
+        "Dosage form": "Injection",
+        "Pack Size": "4 ml"
+    },
+    {
+        "Sr.No.": 267,
+        "Product Name": "Suxamethonium (IV; Sublingual)",
+        "Product Code": "KWT",
+        "Strength": "50mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 268,
+        "Product Name": "Suxamethonium Chloride",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 269,
+        "Product Name": "Temozolomide",
+        "Product Code": "",
+        "Strength": "100 mg/vial",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 270,
+        "Product Name": "Tenoxicam",
+        "Product Code": "",
+        "Strength": "20 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 271,
+        "Product Name": "Terbutaline Sulphate",
+        "Product Code": "",
+        "Strength": "1 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 272,
+        "Product Name": "Thiamine (Vitamin B1) (IM; IV)",
+        "Product Code": "SJ",
+        "Strength": "50 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": "2 ml"
+    },
+    {
+        "Sr.No.": 273,
+        "Product Name": "Thiamine Hydrochloride",
+        "Product Code": "",
+        "Strength": "100 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 274,
+        "Product Name": "Thiopental (IV)",
+        "Product Code": "OL",
+        "Strength": "1 g/20 mL",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 275,
+        "Product Name": "Thiopental",
+        "Product Code": "",
+        "Strength": "1 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 276,
+        "Product Name": "Thiopental Sodium",
+        "Product Code": "",
+        "Strength": "1 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 277,
+        "Product Name": "Thiopentone Sodium",
+        "Product Code": "",
+        "Strength": "1 g",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 278,
+        "Product Name": "Topotecan",
+        "Product Code": "",
+        "Strength": "1 mg/1 mL",
+        "Dosage form": "Injection",
+        "Pack Size": "4 ml"
+    },
+    {
+        "Sr.No.": 279,
+        "Product Name": "Tramadol HCl",
+        "Product Code": "",
+        "Strength": "50 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 280,
+        "Product Name": "Trastuzumab (IV)",
+        "Product Code": "",
+        "Strength": "440 mg",
+        "Dosage form": "Injection",
+        "Pack Size": "20 ml"
+    },
+    {
+        "Sr.No.": 281,
+        "Product Name": "Triamcinolone Acetonide",
+        "Product Code": "",
+        "Strength": "40 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 282,
+        "Product Name": "Triamcinolone Acetonide",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 283,
+        "Product Name": "Triamcinolone Phosphate",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 284,
+        "Product Name": "Urapidil",
+        "Product Code": "",
+        "Strength": "5 mg/mL",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 285,
+        "Product Name": "Verapamil",
+        "Product Code": "",
+        "Strength": "2.5 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 286,
+        "Product Name": "Vinblastine",
+        "Product Code": "FHC",
+        "Strength": "10 mg/10mL",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    },
+    {
+        "Sr.No.": 287,
+        "Product Name": "Vinblastine",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 293,
+        "Product Name": "Vitamin K1 (Phytomenadione)",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 294,
+        "Product Name": "Vitamin K3 (Menadione Sodium Bisulphite)",
+        "Product Code": "",
+        "Strength": "10 mg/ml",
+        "Dosage form": "Injection",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 295,
+        "Product Name": "Water for injections",
+        "Product Code": "SJ",
+        "Strength": "",
+        "Dosage form": "Injection",
+        "Pack Size": "10 ml"
+    }
+]
+       
+    const itemsPerPage = 10; // Number of items per page
+    let currentPage = 1;
+
+    // Function to render the data
+    function renderProductList(filterText = "", page = 1) {
+        const productListContainer = document.getElementById('product-list');
+        productListContainer.innerHTML = ""; // Clear previous content
+
+        // Filter products based on search text
+        const filteredProducts = productData.filter(product =>
+            Object.values(product).some(value =>
+                String(value).toLowerCase().includes(filterText.toLowerCase())
+            )
+        );
+
+        // Paginate the filtered products
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+
+        // Render the products
+        if (paginatedProducts.length === 0) {
+            productListContainer.innerHTML = "<p class='text-center text-gray-500'>No products found.</p>";
+        } else {
+            const table = document.createElement('table');
+            table.className = 'min-w-full bg-white shadow-md rounded-lg';
+
+            // Table header
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            for (const key of Object.keys(productData[0])) {
+                const th = document.createElement('th');
+                th.className = 'py-2 px-4 border-b border-gray-200 bg-gray-100 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider';
+                th.textContent = key;
+                headerRow.appendChild(th);
+            }
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Table body
+            const tbody = document.createElement('tbody');
+            for (const product of paginatedProducts) {
+                const row = document.createElement('tr');
+                for (const value of Object.values(product)) {
+                    const td = document.createElement('td');
+                    td.className = 'py-2 px-4 border-b border-gray-200 text-sm text-gray-700';
+                    td.textContent = value;
+                    row.appendChild(td);
+                }
+                tbody.appendChild(row);
+            }
+            table.appendChild(tbody);
+
+            productListContainer.appendChild(table);
+        }
+
+        // Update pagination controls
+        updatePaginationControls(filteredProducts.length, page);
+    }
+
+    // Function to update pagination controls
+    function updatePaginationControls(totalItems, currentPage) {
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const pageInfo = document.getElementById('pageInfo');
+        const prevPageButton = document.getElementById('prevPage');
+        const nextPageButton = document.getElementById('nextPage');
+
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        prevPageButton.disabled = currentPage === 1;
+        nextPageButton.disabled = currentPage === totalPages;
+    }
+
+    // Event listener for search input
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', (event) => {
+        currentPage = 1; // Reset to first page when searching
+        renderProductList(event.target.value, currentPage);
+    });
+
+    // Event listener for previous page button
+    document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderProductList(searchInput.value, currentPage);
+        }
+    });
+
+    // Event listener for next page button
+    document.getElementById('nextPage').addEventListener('click', () => {
+        const totalItems = productData.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderProductList(searchInput.value, currentPage);
+        }
+    });
+
+    // Initial render
+    renderProductList();
+
+    document.getElementById('dropdownNavbarLink').addEventListener('click', function() {
+        const dropdown = document.getElementById('dropdownNavbar');
+        dropdown.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
