@@ -1,13 +1,13 @@
 const firebaseConfig = {
     //   copy your firebase config informations
-    apiKey: "AIzaSyCtWRP5yh_HLAYABkr-kuqFLe2emF3uvIM",
-    authDomain: "med-sine.firebaseapp.com",
-    databaseURL: "https://med-sine-default-rtdb.firebaseio.com",
-    projectId: "med-sine",
-    storageBucket: "med-sine.firebasestorage.app",
-    messagingSenderId: "1031472829436",
-    appId: "1:1031472829436:web:a350d346ca3a4c2feb9879",
-    measurementId: "G-1T78RQ4G9V"
+    apiKey: "AIzaSyBA1XwlTevHuD7U45PuPPjDA0iqNE_sqJc",
+    authDomain: "med-sine-healthcare.firebaseapp.com",
+    databaseURL: "https://med-sine-healthcare-default-rtdb.firebaseio.com",
+    projectId: "med-sine-healthcare",
+    storageBucket: "med-sine-healthcare.firebasestorage.app",
+    messagingSenderId: "232731820170",
+    appId: "1:232731820170:web:01b99adde4944d4390ad73",
+    measurementId: "G-QPCM2S16MV"
   };
   
   // initialize firebase
