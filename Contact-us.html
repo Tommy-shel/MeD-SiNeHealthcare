@@ -1,297 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeD-ShiNE Healthcare</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-      <!-- Font Awesome CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <style>
-         
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeD-ShiNE Healthcare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
     .about-us-section {
-      padding: 100px 0; /* Adjust padding as needed */
-      color: #ffffff; /* Light text color for better contrast */
-      text-align: center; /* Center-align text */
+      padding: 100px 0;
+      color: #ffffff;
+      text-align: center;
       position: relative;
       height: 500px;
       margin-bottom: 90px;
-      
-      
-  }
-  .about-us-section::before {
+    }
+    .about-us-section::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-
-      /* background: rgba(99, 99, 233, 0.5); Dark overlay for better readability */
       z-index: 1;
-  }
-  .about-us-section .container {
+    }
+    .about-us-section .container {
       position: relative;
       z-index: 2;
-  }
-  .about-us-section h1 {
+    }
+    .about-us-section h1 {
       font-size: 36px;
       margin-bottom: 20px;
-  }
- 
-      .contact-form {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        backdrop-filter: blur(10px);
-        background: linear-gradient(45deg,#eeeff3,#9bbfec);
-        border-radius: 8px;
-        box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-        transition:all 0.2s ease-in-out;
     }
-    
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+    }
+    .info-boxes {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+    }
+    .info-box {
+      background-color: #fafafa;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      width: 500px;
+    }
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(210, 18, 18, 0.2);
+      background-color: #15b5e1; /* Dark blue background on hover */
+      color: #fff; /* White text on hover */
+    }
+    .info-box:hover h3,
+    .info-box:hover p,
+    .info-box:hover .icon {
+      color: #fff; /* White text on hover */
+    }
+    .info-box .icon {
+      font-size: 2em;
+      color: #007bff;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+    .info-box h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #2d2b2b;
+      transition: color 0.3s ease;
+    }
+    .info-box p {
+      font-size: 1em;
+      color: #555;
+      margin: 5px 0;
+      transition: color 0.3s ease;
+    }
+    .info-box a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .info-box a:hover {
+      text-decoration: underline;
+    }
+    .contact-form {
+      flex: 1;
+      max-width: 500px; /* Reduced width */
+      backdrop-filter: blur(10px);
+      background: linear-gradient(45deg, #eeeff3, #9bbfec);
+      border-radius: 8px;
+      box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
     .contact-form h2 {
-        font-size: 24px;
-        color: #333;
-        margin-bottom: 10px;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
     }
-    
     .contact-form p {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 20px;
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
     }
-    
     .form-group {
-        margin-bottom: 15px;
+      margin-bottom: 15px;
     }
-    
     .form-group label {
-        display: block;
-        font-size: 14px;
-        color: #333;
-        margin-bottom: 5px;
+      display: block;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
     }
-    
     .form-group input,
     .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
-    
     .form-group textarea {
-        resize: vertical; /* Allow vertical resizing */
+      resize: vertical;
     }
-    
     .form-group button {
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    
     .form-group button:hover {
-        background-color: #0056b3;
+      background-color: #0056b3;
     }
-</style>
-      <!-- Custom-->
+  </style>
 </head>
-
 <body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
-        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-         
-         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-         </svg>
-     </button>
-     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      
-       <ul class="flex flex-col  font-semibold  p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-         <div class="flex items-center w-30 ">
-           <img src="./WhatsApp Image 2025-01-19 at 9.42.51 AM.jpeg" alt="Logo" class="h-20  mr-4 rounded-full">
-       </div>
-         <li>
-           <a href="index.html" class="ml-40 px-7  mt-2 block py-2  text-gray-900  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparen" aria-current="page">Home</a>
-         </li>
-         <li>
-           <a href="products.html" class="  mt-2 block py-2 ml-9 text-gray-900  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent " aria-current="page">Products</a>
-         </li>
-         <li>
-         <a href="about-us.html" class="mt-2 block py-2 px-3 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
-       </li>
-       <li>
-        <a href="./Country_Presence.html" class="mt-2 block py-2 ml-9
-         px-3 text-gray-900 rounded hover:bg-gray-100 *
-          md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white
-           md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Global Presence </a>
-    
-       </li>
-        
-         <li>
-           <a href="./Contact-us.html" class="mt-2 block py-2 px-3 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
-         </li>
-    
-       </ul>
-     </div>
+  <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <ul class="flex flex-col font-semibold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <div class="flex items-center w-30">
+          <img src="./WhatsApp Image 2025-01-19 at 9.42.51 AM.jpeg" alt="Logo" class="h-20 mr-4 rounded-full">
+        </div>
+        <li>
+          <a href="index.html" class="ml-40 px-7 mt-2 block py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparen" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="products.html" class="mt-2 block py-2 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Products</a>
+        </li>
+        <li>
+          <a href="about-us.html" class="mt-2 block py-2 px-3 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+        </li>
+        <li>
+          <a href="./Country_Presence.html" class="mt-2 block py-2 ml-9 px-3 text-gray-900 rounded hover:bg-gray-100 * md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Global Presence</a>
+        </li>
+        <li>
+          <a href="./Contact-us.html" class="mt-2 block py-2 px-3 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+        </li>
+      </ul>
     </div>
-    </nav>
-    <div class="about-us-section" style="background-image: url('./contact.jpg'); background-size: cover; background-position: center;">
-       
+  </nav>
+  <div class="about-us-section" style="background-image: url('./contact.jpg'); background-size: cover; background-position: center;"></div>
+
+  <div class="contact-container">
+    <!-- Info Boxes -->
+    <div class="info-boxes">
+      <div class="info-box">
+        <div class="icon">📍</div>
+        <h3>Warehouse Address</h3>
+        <p> FF/5 , THE VALENCIA ,B/H PRIYA CINEMA ,SEVASI BHAYLI CANAL ROAD , VADODARA </p>
       </div>
-      
-        <!-- <h1 class="font-bold">Contact Us</h1> -->
-    
-<div class="contact-form ">
+      <div class="info-box">
+        <div class="icon">✉️</div>
+        <h3>Registered Address</h3>
+         <p>GRD FLOOR /185B POST DHAMANI TALUKA
+            SANGMESHWARC , RATNAGIRI Road / Street : KUMBAHRKHANI
+            PIN 415 609
+         </p>
+      </div>
+      <div class="info-box">
+        <div class="icon">📞</div>
+        <h3>Communication Address</h3>
+        <p>H 704, Dr Babasaheb Ambedkar CHS ,Senapati Bapat Road , Dadar (w) 400 028</a></p>
+      </div>
+    </div>
 
-    <h2>Contact With Us</h2>
-    <p>If you have any questions, please feel free to contact us.</p>
-
-    <form action="" id="contactForm">
-        <!-- Name Field -->
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Contact With Us</h2>
+      <p>If you have any questions, please feel free to contact us.</p>
+      <form action="" id="contactForm">
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
         </div>
-
-        <!-- Email Field -->
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
-
-        <!-- Phone Field -->
         <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
         </div>
-
-        <!-- Subject Field -->
         <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
         </div>
-
-        <!-- Message Field -->
         <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
         </div>
-
-        <!-- Submit Button -->
         <div class="form-group">
-            <button type="submit">Send</button>
+          <button type="submit">Send</button>
         </div>
-    </form>
-</div>
-
-    <!-- <h1 class="font-bold">Contact Us</h1> -->
-</div>
-<div class="alert" style="display: none;">
-    Your message has been sent successfully!
+      </form>
+    </div>
   </div>
 
   <footer id="footer" class="bg-indigo-950 text-white py-8 mt-16 pt-4">
-    <!-- Footer Top -->
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- About Us Section -->
-            <div class="space-y-4">
-                <h2 class="text-xl font-bold">Who are we?</h2>
-                <p class="text-gray-400 text-justify">
-                    We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
-  We were established in 2020 and incorporated in 2024. 
-  We focus on quality, innovation, and customer satisfaction,
-   deliver tailored solutions to meet the diverse needs of our clients. 
-                </p>
-  
-            </div>
-  
-            <!-- Site Map Section -->
-            <div class="space-y-4">
-                <h2 class="text-xl font-bold">Site map</h2>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="./index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                            <i class="fa fa-caret-right mr-2"></i>Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./about-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                            <i class="fa fa-caret-right mr-2"></i>About Us
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a href="./products.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                            <i class="fa fa-caret-right mr-2"></i>Products
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./Contact-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                            <i class="fa fa-caret-right mr-2"></i>Contact Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./Country_Presence.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                            <i class="fa fa-caret-right mr-2"></i>Global Presence 
-                        </a>
-                    </li>
-                </ul>
-            </div>
-  
-            <!-- Contact Us Section -->
-            <div class="space-y-4">
-                <h2 class="text-xl font-bold">CONTACT US</h2>
-                <ul class="space-y-4 text-gray-400">
-                    <li class="flex items-start">
-                        <i class="fa fa-map-marker mt-1 mr-2"></i>
-                        <span>
-                          H 704, Dr Babasaheb Ambedkar CHS, Senapati Bapat Road, Dadar (W) 400 028
-                        </span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa fa-phone mr-2"></i>
-                        <a href="tel:+919727250640" class="hover:text-white transition-colors">+91 86910 16407</a>,
-                        <a href="tel:+919016808536" class="hover:text-white transition-colors">+91 91372 02764</a>
-                    </li>
-                    <li class=" items-center">
-                        <i class="fa fa-envelope mr-2"></i>
-                        <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors">operations.medsinehealthcare@gmail.com</a>,
-                        <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors px-7">bd.globaltradecorp@gmail.com</a>
-                        <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors px-7">operations.gtc88@gmail.com</a>
-  
-                    </li>
-                </ul>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold">Who are we?</h2>
+          <p class="text-gray-400 text-justify">
+            We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
+            We were established in 2020 and incorporated in 2024. 
+            We focus on quality, innovation, and customer satisfaction, deliver tailored solutions to meet the diverse needs of our clients.
+          </p>
         </div>
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold">Site map</h2>
+          <ul class="space-y-2">
+            <li>
+              <a href="./index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                <i class="fa fa-caret-right mr-2"></i>Home
+              </a>
+            </li>
+            <li>
+              <a href="./about-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                <i class="fa fa-caret-right mr-2"></i>About Us
+              </a>
+            </li>
+            <li>
+              <a href="./products.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                <i class="fa fa-caret-right mr-2"></i>Products
+              </a>
+            </li>
+            <li>
+              <a href="./Contact-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                <i class="fa fa-caret-right mr-2"></i>Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="./Country_Presence.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                <i class="fa fa-caret-right mr-2"></i>Global Presence
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-xl font-bold">CONTACT US</h2>
+          <ul class="space-y-4 text-gray-400">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker mt-1 mr-2"></i>
+              <span>H 704, Dr Babasaheb Ambedkar CHS, Senapati Bapat Road, Dadar (W) 400 028</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-phone mr-2"></i>
+              <a href="tel:+919727250640" class="hover:text-white transition-colors">+91 86910 16407</a>,
+              <a href="tel:+919016808536" class="hover:text-white transition-colors">+91 91372 02764</a>
+            </li>
+            <li class="items-center">
+              <i class="fa fa-envelope mr-2"></i>
+              <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors">operations.medsinehealthcare@gmail.com</a>,
+              <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors px-7">bd.globaltradecorp@gmail.com</a>
+              <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors px-7">operations.gtc88@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  
-    <!-- Copyright Section -->
     <div class="mt-8 border-t border-gray-800 pt-6">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">
-                © Copyright 2025 | All Rights Reserved by
-                <a href="#" target="_blank" class="text-white hover:underline">MeD-SiNE Healthcare.com</a>
-            </p>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-400">
+          © Copyright 2025 | All Rights Reserved by
+          <a href="#" target="_blank" class="text-white hover:underline">MeD-SiNE Healthcare.com</a>
+        </p>
+      </div>
     </div>
   </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-<script src="./mail.js"></script>
-    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="./mail.js"></script>
 </body>
-
 </html>
