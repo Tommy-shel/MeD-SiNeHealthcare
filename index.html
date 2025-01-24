@@ -5,69 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeD-ShiNE Healthcare</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-      <!-- Font Awesome CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <!-- Custom CSS -->
-      <style>
-          .hero-slider .single-slider {
-              background-size: cover;
-              background-position: center;
-              height: 500px; /* Adjust height as needed */
-              display: flex;
-              align-items: center;
-          }
-          .hero-slider .text {
-              
-              padding: 20px;
-              border-radius: 10px;
-          }
-          .hero-slider h1 {
-              font-size: 2.5rem;
-              font-weight: bold;
-              color: #333;
-          }
-          .hero-slider p {
-              font-size: 1.2rem;
-              color: #555;
-          }
-          .hero-slider .btn {
-              margin-right: 10px;
-              padding: 10px 20px;
-              border-radius: 5px;
-              text-decoration: none;
-              color: #fff;
-              background-color: #007bff;
-          }
-          .hero-slider .btn.primary {
-              background-color: #28a745;
-          }
-          .owl-nav {
-              position: absolute;
-              top: 50%;
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-              transform: translateY(-50%);
-          }
-          .owl-prev, .owl-next {
-              background: rgba(0, 0, 0, 0.5) !important;
-              color: #fff !important;
-              padding: 10px !important;
-              border-radius: 50% !important;
-          }
-          .owl-prev:hover, .owl-next:hover {
-              background: rgba(0, 0, 0, 0.8) !important;
-          }
-          #dropdownNavbar {
-          position: absolute;
-          top: 100%; /* Position below the dropdown button */
-          left: 0;
-          z-index: 1000; /* Ensure it appears above other content */
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-slider .single-slider {
+            background-size: cover;
+            background-position: center;
+            height: 500px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
         }
-
+        .hero-slider .text {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .hero-slider h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .hero-slider p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .hero-slider .btn {
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+        }
+        .hero-slider .btn.primary {
+            background-color: #28a745;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .owl-prev, .owl-next {
+            background: rgba(0, 0, 0, 0.5) !important;
+            color: #fff !important;
+            padding: 10px !important;
+            border-radius: 50% !important;
+        }
+        .owl-prev:hover, .owl-next:hover {
+            background: rgba(0, 0, 0, 0.8) !important;
+        }
+        #dropdownNavbar {
+            position: absolute;
+            top: 100%; /* Position below the dropdown button */
+            left: 0;
+            z-index: 1000; /* Ensure it appears above other content */
+        }
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -77,293 +72,379 @@
                 opacity: 1;
                 transform: translateY(0) scale(1);
             }
-        
         }
-
         .animated-box {
             animation: fadeIn 0.5s ease-in-out;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-
         .animated-box:hover {
             transform: scale(1.05);
             background-color: #f0f8ff;
         }
-      </style>
-  </head>
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background-color: #f9fafb;
+            padding: 4rem 0;
+        }
+        .why-choose-us h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 2rem;
+        }
+        .why-choose-us .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .why-choose-us .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .why-choose-us .card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+        .why-choose-us .card p {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+        .why-choose-us .card .flex {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .why-choose-us .card img {
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+        }
+    </style>
 </head>
-<body >
+<body>
     <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
         <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-         
-         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-         </svg>
-     </button>
-     <div class="hidden w-full md:block md:w-auto " id="navbar-dropdown">
-      
-       <ul class="flex flex-col  font-semibold  p-4 md:p-0 mt-9 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-         <div class="flex items-center w-30 ">
-           <img src="./WhatsApp Image 2025-01-19 at 9.42.51 AM.jpeg" alt="Logo" class="h-20  mr-4 rounded-full">
-       </div>
-         <li>
-           <a href="index.html" class="ml-40 px-7  mt-2 block py-2  text-indigo-950  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-indigo-950 dark:hover:text-white md:dark:hover:bg-transparen" aria-current="page">Home</a>
-         </li>
-         <li>
-           <a href="products.html" class="  mt-2 block py-2 ml-7  text-gray-900  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent " aria-current="page">Products</a>
-         </li>
-         <li>
-         <a href="about-us.html" class="mt-2 block py-2 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
-       </li>
-       <li>
-        <a href="./Country_Presence.html" class="mt-2 block py-2
-         ml-7 text-gray-900 rounded hover:bg-gray-100 *
-          md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white
-           md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Global Presence </a>
-    
-       </li>
-        
-         <li>
-           <a href="./Contact-us.html" class="mt-2 block py-2 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
-         </li>
-    
-       </ul>
-     </div>
-    </div>
-    </nav>
-  
-  <!-- component -->
-<!-- Hero Slider -->
-<div class="hero-slider owl-carousel owl-theme owl-loaded">
-  <!-- Start Single Slider -->
-  <div class="single-slider" style="background-image:url(./med.jpg)">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-7">
-                  <div class="text">
-                      
-                      <div class="button">
-                          <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
-                          <a href="./about-us.html" class="btn primary">About Us</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- End Single Slider -->
-  <!-- Start Single Slider -->
-  <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-7">
-                  <div class="text">
-                     
-                      <div class="button mt-3">
-                          <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
-                          <a href="./about-us.html" class="btn primary mt-2">About Us</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- End Single Slider -->
-  <!-- Start Single Slider -->
-  <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner3.jpg)">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-7">
-                  <div class="text">
-                      
-                      <div class="button mt-3">
-                          <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
-                          <a href="./about-us.html" class="btn primary mt-2">About Us</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- End Single Slider -->
-  <!-- Start Single Slider -->
-  <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner4.jpg)">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-7">
-                  <div class="text ">
-                     
-                      <div class="button ">
-                          <a href="./Contact-us.html" class="btn">Contact Now</a>
-                          <a href="./about-us.html" class="btn primary">About Us</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- End Single Slider -->
-</div>
-<div class="text-center mt-3 font-bold text-2xl text-indigo-900">WELCOME <br> TO <br> MeD-SiNE HEALTHCARE</div>
-<p class="text-center mt-3 p-3 text-gray-400">Your better live our responsibility</p>
-
- <!-- Container -->
- <div class="max-w-6xl mx-auto p-8">
-
-  <!-- Grid Container -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <!-- Box 1: Vision -->
-      <div class="bg-white p-8 shadow-lg rounded-lg animated-box">
-          <h2 class="text-3xl font-bold text-blue-800 mb-4 text-center">VISION</h2>
-          <p class="text-gray-400 text-lg leading-relaxed text-center">
-            We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
-            We were established in 2020 and incorporated in 2024. 
-            We focus on quality, innovation, and customer satisfaction,
-             deliver tailored solutions to meet the diverse needs of our clients. 
-          </p>
-      </div>
-
-      <!-- Box 2: Mission -->
-      <div class="bg-white p-8 shadow-lg rounded-lg animated-box">
-          <h2 class="text-3xl font-bold text-green-800 mb-4 text-center">MISSION</h2>
-          <p class="text-gray-400 text-lg leading-relaxed text-center">
-            In today's world, accessing quality pharmaceuticals has become a significant challenge. 
-            High-quality medications are often prohibitively expensive, while more affordable options 
-            frequently fail to meet the necessary standards to ensure effective treatment.
-             MeD-SiNE Healthcare is dedicated to bridging this gap by producing top-quality pharmaceuticals at prices that are accessible to all.
-          </p>
-      </div>
-
-  </div>
-
-</div>
-<!--footer-->
-<footer id="footer" class="bg-indigo-950 text-white py-8 mt-5 pt-4">
-  <!-- Footer Top -->
-  <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- About Us Section -->
-          <div class="space-y-4">
-              <h2 class="text-xl font-bold">Who are we?</h2>
-              <p class="text-gray-400 text-justify">
-                We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
-  We were established in 2020 and incorporated in 2024. 
-  We focus on quality, innovation, and customer satisfaction,
-   deliver tailored solutions to meet the diverse needs of our clients. 
-              </p>
-
-          </div>
-
-          <!-- Site Map Section -->
-          <div class="space-y-4">
-              <h2 class="text-xl font-bold">Site map</h2>
-              <ul class="space-y-2">
-                  <li>
-                      <a href="./index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                          <i class="fa fa-caret-right mr-2"></i>Home
-                      </a>
-                  </li>
-                  <li>
-                      <a href="./about-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                          <i class="fa fa-caret-right mr-2"></i>About Us
-                      </a>
-                  </li>
-                  
-                  
-                  <li>
-                      <a href="./products.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                          <i class="fa fa-caret-right mr-2"></i>Products
-                      </a>
-                  </li>
-                  <li>
-                      <a href="./Contact-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                          <i class="fa fa-caret-right mr-2"></i>Contact Us
-                      </a>
-                  </li>
-                  <li>
-                    <a href="./Country_Presence.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
-                        <i class="fa fa-caret-right mr-2"></i>Global Presence 
-                    </a>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-semibold p-4 md:p-0 mt-9 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <div class="flex items-center w-30">
+                    <img src="./WhatsApp Image 2025-01-19 at 9.42.51 AM.jpeg" alt="Logo" class="h-20 mr-4 rounded-full">
+                </div>
+                <li>
+                    <a href="index.html" class="ml-40 px-7 mt-2 block py-2 text-indigo-950 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-indigo-950 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
                 </li>
-              </ul>
-          </div>
+                <li>
+                    <a href="products.html" class="mt-2 block py-2 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Products</a>
+                </li>
+                <li>
+                    <a href="about-us.html" class="mt-2 block py-2 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+                </li>
+                <li>
+                    <a href="./Country_Presence.html" class="mt-2 block py-2 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Global Presence</a>
+                </li>
+                <li>
+                    <a href="./Contact-us.html" class="mt-2 block py-2 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-          <!-- Contact Us Section -->
-          <div class="space-y-4">
-              <h2 class="text-xl font-bold">CONTACT US</h2>
-              <ul class="space-y-4 text-gray-400">
-                  <li class="flex items-start">
-                      <i class="fa fa-map-marker mt-1 mr-2"></i>
-                      <span>
-                        H 704, Dr Babasaheb Ambedkar CHS, Senapati Bapat Road, Dadar (W) 400 028
-                      </span>
-                  </li>
-                  <li class="flex items-center">
-                      <i class="fa fa-phone mr-2"></i>
-                      <a href="tel:+919727250640" class="hover:text-white transition-colors">+91 86910 16407</a>,
-                      <a href="tel:+919016808536" class="hover:text-white transition-colors">+91 91372 02764</a>
-                  </li>
-                  <li class=" items-center">
-                      <i class="fa fa-envelope mr-2"></i>
-                      <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors">operations.medsinehealthcare@gmail.com</a>,
-                      <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors px-7">bd.globaltradecorp@gmail.com</a>
-                      <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors px-7">operations.gtc88@gmail.com</a>
+    <!-- Hero Slider -->
+    <div class="hero-slider owl-carousel owl-theme owl-loaded">
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url(./med.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <div class="button">
+                                <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
+                                <a href="./about-us.html" class="btn primary">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <div class="button mt-3">
+                                <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
+                                <a href="./about-us.html" class="btn primary mt-2">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner3.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <div class="button mt-3">
+                                <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
+                                <a href="./about-us.html" class="btn primary mt-2">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner4.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <div class="button">
+                                <a href="./Contact-us.html" class="btn">Contact Now</a>
+                                <a href="./about-us.html" class="btn primary">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+    </div>
 
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </div>
+    <div class="text-center mt-3 font-bold text-2xl text-indigo-900">WELCOME <br> TO <br> MeD-SiNE HEALTHCARE</div>
+    <p class="text-center mt-3 p-3 text-gray-400">Your better live our responsibility</p>
 
-  <!-- Copyright Section -->
-  <div class="mt-8 border-t border-gray-800 pt-6">
-      <div class="container mx-auto px-4 text-center">
-          <p class="text-gray-400">
-              © Copyright 2025 | All Rights Reserved by
-              <a href="#" target="_blank" class="text-white hover:underline">MeD-SiNE Healthcare.com</a>
-          </p>
-      </div>
-  </div>
-</footer>
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<!-- Initialize Owl Carousel -->
-<script>
-  $(document).ready(function(){
-      $('.hero-slider').owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          items: 1,
-          autoplay: true,
-          autoplayTimeout: 5000,
-          navText: [
-              "<i class='fa fa-angle-left'></i>",
-              "<i class='fa fa-angle-right'></i>"
-          ]
-      });
-  });
-            // Dropdown toggle logic
-            document.getElementById('dropdownNavbarLink').addEventListener('click', function() {
-                const dropdown = document.getElementById('dropdownNavbar');
-                dropdown.classList.toggle('hidden');
+    <!-- Container -->
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Box 1: Vision -->
+            <div class="bg-white p-8 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-eye text-4xl text-blue-800 mr-4"></i>
+                    <h2 class="text-3xl font-bold text-blue-800">VISION</h2>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed text-center">
+                    We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
+                    We were established in 2020 and incorporated in 2024. 
+                    We focus on quality, innovation, and customer satisfaction,
+                    deliver tailored solutions to meet the diverse needs of our clients. 
+                </p>
+            </div>
+
+            <!-- Box 2: Mission -->
+            <div class="bg-white p-8 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-bullseye text-4xl text-green-800 mr-4"></i>
+                    <h2 class="text-3xl font-bold text-green-800">MISSION</h2>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed text-center">
+                    In today's world, accessing quality pharmaceuticals has become a significant challenge. 
+                    High-quality medications are often prohibitively expensive, while more affordable options 
+                    frequently fail to meet the necessary standards to ensure effective treatment.
+                    MeD-SiNE Healthcare is dedicated to bridging this gap by producing top-quality pharmaceuticals at prices that are accessible to all.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us max-w-6xl mx-auto p-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-indigo-900">Why Choose Us for Your Healthcare Needs</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Quality -->
+            <div class="card bg-white p-6 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-award text-4xl text-blue-800 mr-4"></i>
+                    <h3 class="text-xl font-bold text-blue-800">Quality</h3>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Top Notch Quality. We strictly adhere to the latest international 
+                    standards BP, USP, JP, and validated In-House Method. All our products 
+                    are tested in highly accredited NABL laboratories to ensure quality standards are met.
+                </p>
+            </div>
+
+            <!-- Technology -->
+            <div class="card bg-white p-6 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-microscope text-4xl text-green-800 mr-4"></i>
+                    <h3 class="text-xl font-bold text-green-800">Technology</h3>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    All formulations are made using the latest technologies and sophisticated machinery.
+                </p>
+            </div>
+
+            <!-- Client Satisfaction -->
+            <div class="card bg-white p-6 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-smile text-4xl text-purple-800 mr-4"></i>
+                    <h3 class="text-xl font-bold text-purple-800">Client Satisfaction</h3>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    In a very short span, we have achieved a great level of client satisfaction by delivering orders in a timely manner.
+                </p>
+            </div>
+
+            <!-- Our Mission -->
+            <div class="card bg-white p-6 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-bullseye text-4xl text-red-800 mr-4"></i>
+                    <h3 class="text-xl font-bold text-red-800">Our Mission</h3>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Our mission is to ensure high-quality medicines reach every corner of the world and are affordable.
+                </p>
+            </div>
+
+            <!-- Strength -->
+            <div class="card bg-white p-6 shadow-lg rounded-lg animated-box">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-users text-4xl text-yellow-800 mr-4"></i>
+                    <h3 class="text-xl font-bold text-yellow-800">Strength</h3>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    We are a team of highly experienced professionals in Regulatory, Quality, Supply Chain, and have associate partners across India, which enables us to supply all healthcare needs under one roof.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-indigo-950 text-white py-8 mt-5 pt-4">
+        <!-- Footer Top -->
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About Us Section -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold">Who are we?</h2>
+                    <p class="text-gray-400 text-justify">
+                        We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
+                        We were established in 2020 and incorporated in 2024. 
+                        We focus on quality, innovation, and customer satisfaction,
+                        deliver tailored solutions to meet the diverse needs of our clients. 
+                    </p>
+                </div>
+
+                <!-- Site Map Section -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold">Site map</h2>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="./index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                                <i class="fa fa-caret-right mr-2"></i>Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                                <i class="fa fa-caret-right mr-2"></i>About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./products.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                                <i class="fa fa-caret-right mr-2"></i>Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Contact-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                                <i class="fa fa-caret-right mr-2"></i>Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Country_Presence.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                                <i class="fa fa-caret-right mr-2"></i>Global Presence
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Section -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold">CONTACT US</h2>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-2"></i>
+                            <span>
+                                H 704, Dr Babasaheb Ambedkar CHS, Senapati Bapat Road, Dadar (W) 400 028
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-2"></i>
+                            <a href="tel:+919727250640" class="hover:text-white transition-colors">+91 86910 16407</a>,
+                            <a href="tel:+919016808536" class="hover:text-white transition-colors">+91 91372 02764</a>
+                        </li>
+                        <li class="items-center">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors">operations.medsinehealthcare@gmail.com</a>,
+                            <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors px-7">bd.globaltradecorp@gmail.com</a>
+                            <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors px-7">operations.gtc88@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-8 border-t border-gray-800 pt-6">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-400">
+                    © Copyright 2025 | All Rights Reserved by
+                    <a href="#" target="_blank" class="text-white hover:underline">MeD-SiNE Healthcare.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Initialize Owl Carousel -->
+    <script>
+        $(document).ready(function(){
+            $('.hero-slider').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ]
             });
+        });
 
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(event) {
-                const dropdown = document.getElementById('dropdownNavbar');
-                const dropdownButton = document.getElementById('dropdownNavbarLink');
-                if (!dropdownButton.contains(event.target) && !dropdown.contains(event.target)) {
-                    dropdown.classList.add('hidden');
-                }
-            });
-        
+        // Dropdown toggle logic
+        document.getElementById('dropdownNavbarLink').addEventListener('click', function() {
+            const dropdown = document.getElementById('dropdownNavbar');
+            dropdown.classList.toggle('hidden');
+        });
 
-     
-  
-</script>
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdownNavbar');
+            const dropdownButton = document.getElementById('dropdownNavbarLink');
+            if (!dropdownButton.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
