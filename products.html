@@ -11,181 +11,291 @@
 
     <style>
         .owl-carousel .item img {
-            width: 100%; /* Make images responsive */
-            height: 300px; /* Set a fixed height for all images */
-            object-fit: cover; /* Ensure images cover the area without distortion */
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
         }
-        .product-box {
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
-            border: 2px solid #e2e8f0; /* Border color */
-            border-radius: 0.8rem; /* Rounded corners */
-            padding: 1.4rem; /* Padding inside the box */
-            text-align: center; /* Center text */
-            background: off white; /* White background */
-            
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(14, 9, 103, 0.9), rgba(59, 130, 246, 0.8)),
+                        url('./medicine.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-
-        .product-box:hover {
-            transform: scale(1.05); /* Scale up on hover */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
-            background-color: rgb(14, 9, 103);
-        }
-
-        .product-box:hover h3{
-            color: #FFFF;
+        
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #e2e8f0;
+            border-radius: 1rem;
+            background: white;
+            position: relative;
+            overflow: hidden;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-            gap: 1.5rem; /* Space between boxes */
-            padding: 2rem; /* Padding around the grid */
-            max-width: 200px; /* Max width of the grid */
-            margin: 0 auto; /* Center the grid */
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
         }
-      
+
+        .product-card:hover::before {
+            left: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(14, 9, 103, 0.2);
+            background: rgb(14, 9, 103);
+            border-color: rgb(14, 9, 103);
+        }
+
+        .product-card:hover .product-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: white !important;
+        }
+
+        .product-card:hover .product-title {
+            color: white;
+        }
+
+        .product-icon {
+            transition: all 0.3s ease;
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        .stagger-7 { animation-delay: 0.7s; }
+        .stagger-8 { animation-delay: 0.8s; }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgb(14, 9, 103), transparent);
+            margin: 3rem 0;
+        }
     </style>
 </head>
 <body>
-    
-
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-0 z-10">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky top-1 z-50">
         <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-         
-             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-         </svg>
-     </button>
-     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      
-       <ul class="flex flex-col  font-semibold  p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-         <div class="flex items-center w-30 ">
-           <img src="./WhatsApp Image 2025-01-19 at 9.42.51 AM.jpeg" alt="Logo" class="h-20  mr-4 rounded-full">
-       </div>
-         <li>
-           <a href="index.html" class="ml-40 px-7  mt-2 block py-2  text-gray-900  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparen" aria-current="page">Home</a>
-         </li>
-         <li>
-           <a href="products.html" class="  mt-2 block py-2 ml-9 text-gray-900  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent " aria-current="page">Products</a>
-         </li>
-         <li>
-         <a href="about-us.html" class="mt-2 block py-2 px-3 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
-       </li>
-       <li>
-        <a href="./Country_Presence.html" class="mt-2 block py-2 ml-9
-         px-3 text-gray-900 rounded hover:bg-gray-100 *
-          md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white
-           md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Global Presence </a>
-    
-       </li>
-        
-         <li>
-           <a href="./Contact-us.html" class="mt-2 block py-2 px-3 ml-9 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
-         </li>
-    
-       </ul>
-     </div>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col items-center font-semibold p-4 md:p-0 mt-9 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <div class="flex items-center w-36">
+                    <img src="./Logo.jpeg" alt="Logo" class="h-38 mr-12 rounded-full">
+                </div>
+                <li>
+                    <a href="index.html" class="ml-30 px-7 mt-2 block py-3 text-indigo-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-indigo-950 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="products.html" class="mt-2 block py-3 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Products</a>
+                </li>
+                <li>
+                    <a href="about-us.html" class="mt-2 block py-3 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Us</a>
+                </li>
+                <li>
+                    <a href="./Country_Presence.html" class="mt-2 block py-3 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Global Presence</a>
+                </li>
+                <li>
+                    <a href="./Contact-us.html" class="mt-2 block py-3 ml-7 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="./product1.jpg" alt="Image 1"></div>
+        <div class="item"><img src="./product2.jpg" alt="Image 2"></div>
+        <div class="item"><img src="./Picture1.png" alt="Image 3"></div>
+        <div class="item"><img src="./mahesh lab1.jpg" alt="Image 4"></div>
     </div>
-    </nav> 
 
-<!-- Image Slider -->
-<div class="owl-carousel owl-theme">
-    <div class="item"><img src="./product1.jpg" alt="Image 1"></div>
-    <div class="item"><img src="./product2.jpg" alt="Image 2"></div>
-    <div class="item"><img src="./Picture1.png" alt="Image 3"></div>
-     <div class="item"><img src="./mahesh lab1.jpg" alt="Image 4"></div>
-    
-
-</div> <div class="hero-slider owl-carousel owl-theme owl-loaded">
-    <!-- Start Single Slider -->
-        <div class="single-slider" style="background-image:url(./medicine.jpg)">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="text">
-                            <div class="button">    
-                                <a href="./Contact-us.html" class="btn mt-2">Contact Now</a>
-                                <a href="./about-us.html" class="btn primary">About Us</a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Hero Section with CTA -->
+    <section class="hero-section py-20 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in-up">
+                    Your Health, Our <span class="text-blue-300">Priority</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 fade-in-up stagger-1">
+                    Delivering innovative healthcare solutions with excellence and compassion
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up stagger-2">
+                    <a href="./Contact-us.html" class="bg-white text-indigo-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                        Contact Now
+                    </a>
+                    <a href="./about-us.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 transform hover:scale-105">
+                        About Us
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- End Single Slider -->
-        <!-- Start Single Slider -->
-        <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)">
- <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)">
+    </section>
 
- <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)">
+    <!-- Products Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 fade-in-up">
+                    Our <span class="text-indigo-900">Products</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in-up stagger-1">
+                    Comprehensive healthcare solutions designed to meet your medical needs with the highest quality standards
+                </p>
+                <div class="section-divider"></div>
+            </div>
 
-<body class="bg-gray-100">
-    <div class="  py-8 ">
-        <div class="grid-container ">
-            <!-- Box 1: Injections -->
-            <a href="./injection.html" class="block product-box ">
-                <div class=" border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-syringe text-3xl text-blue-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Injections</h3>
-                </div>
-            </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Injections -->
+                <a href="./injection.html" class="product-card p-8 text-center group fade-in-up stagger-1">
+                    <div class="floating-animation">
+                        <i class="fas fa-syringe product-icon text-5xl text-blue-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Injections</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Safe and effective injectable medications
+                    </p>
+                </a>
 
-            <!-- Box 2: Capsules -->
-            <a href="./Capsules.html" class="block product-box ">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-capsules text-3xl text-green-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Capsules</h3>
-                </div>
-            </a>
+                <!-- Capsules -->
+                <a href="./Capsules.html" class="product-card p-8 text-center group fade-in-up stagger-2">
+                    <div class="floating-animation" style="animation-delay: 1s;">
+                        <i class="fas fa-capsules product-icon text-5xl text-green-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Capsules</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Premium quality capsule formulations
+                    </p>
+                </a>
 
-            <!-- Box 3: Creams -->
-            <a href="./Creams.html" class="block product-box ">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-prescription-bottle text-3xl text-purple-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Creams</h3>
-                </div>
-            </a>
+                <!-- Creams -->
+                <a href="./Creams.html" class="product-card p-8 text-center group fade-in-up stagger-3">
+                    <div class="floating-animation" style="animation-delay: 2s;">
+                        <i class="fas fa-prescription-bottle product-icon text-5xl text-purple-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Creams</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Topical treatments for various conditions
+                    </p>
+                </a>
 
-            <!-- Box 4: Medical Devices -->
-            <a href="./Medical-Devices.html" class="block product-box">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-toolbox text-3xl text-yellow-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Medical Devices</h3>
-                </div>
-            </a>
+                <!-- Medical Devices -->
+                <a href="./Medical-Devices.html" class="product-card p-8 text-center group fade-in-up stagger-4">
+                    <div class="floating-animation" style="animation-delay: 3s;">
+                        <i class="fas fa-toolbox product-icon text-5xl text-yellow-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Medical Devices</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Advanced medical equipment solutions
+                    </p>
+                </a>
 
-            <!-- Box 5: Syrups -->
-            <a href="./Syrups.html" class="block product-box">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-prescription-bottle-alt text-3xl text-red-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Syrups</h3>
-                </div>
-            </a>
+                <!-- Syrups -->
+                <a href="./Syrups.html" class="product-card p-8 text-center group fade-in-up stagger-5">
+                    <div class="floating-animation" style="animation-delay: 4s;">
+                        <i class="fas fa-prescription-bottle-alt product-icon text-5xl text-red-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Syrups</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Liquid medications for easy consumption
+                    </p>
+                </a>
 
-            <!-- Box 6: Tablets -->
-            <a href="./Tablets.html" class="block product-box">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-tablets text-3xl text-indigo-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Tablets</h3>
-                </div>
-            </a>
+                <!-- Tablets -->
+                <a href="./Tablets.html" class="product-card p-8 text-center group fade-in-up stagger-6">
+                    <div class="floating-animation" style="animation-delay: 5s;">
+                        <i class="fas fa-tablets product-icon text-5xl text-indigo-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Tablets</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Solid dosage forms for optimal efficacy
+                    </p>
+                </a>
 
-            <!-- Box 7: Injections LVP -->
-            <a href="./injection-lvp.html" class="block product-box">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-syringe text-3xl text-pink-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Injections LVP</h3>
-                </div>
-            </a>
+                <!-- Injections LVP -->
+                <a href="./injection-lvp.html" class="product-card p-8 text-center group fade-in-up stagger-7">
+                    <div class="floating-animation" style="animation-delay: 6s;">
+                        <i class="fas fa-syringe product-icon text-5xl text-pink-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Injections LVP</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Large volume parenteral injections
+                    </p>
+                </a>
 
-            <!-- Box 8: Oncology Products -->
-            <a href="./oncology.html" class="block product-box">
-                <div class="border-1 border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 hover:shadow-lg transition-all">
-                    <i class="fas fa-medkit text-3xl text-teal-500 mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-800">Oncology Products</h3>
-                </div>
-            </a>
+                <!-- Oncology Products -->
+                <a href="./oncology.html" class="product-card p-8 text-center group fade-in-up stagger-8">
+                    <div class="floating-animation" style="animation-delay: 7s;">
+                        <i class="fas fa-medkit product-icon text-5xl text-teal-500 mb-6 block"></i>
+                    </div>
+                    <h3 class="product-title text-xl font-semibold text-gray-800 mb-3">Oncology Products</h3>
+                    <p class="text-gray-600 text-sm group-hover:text-gray-300 transition-colors">
+                        Specialized cancer treatment solutions
+                    </p>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-indigo-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in-up">
+                    <div class="text-4xl font-bold mb-2">2020</div>
+                    <div class="text-blue-200">Established</div>
+                </div>
+                <div class="fade-in-up stagger-1">
+                    <div class="text-4xl font-bold mb-2">8+</div>
+                    <div class="text-blue-200">Product Categories</div>
+                </div>
+                <div class="fade-in-up stagger-2">
+                    <div class="text-4xl font-bold mb-2">100%</div>
+                    <div class="text-blue-200">Quality Assurance</div>
+                </div>
+                <div class="fade-in-up stagger-3">
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-blue-200">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer id="footer" class="bg-indigo-950 text-white py-8 mt-5 pt-4">
         <!-- Footer Top -->
         <div class="container mx-auto px-4">
@@ -199,7 +309,6 @@
   We focus on quality, innovation, and customer satisfaction,
    deliver tailored solutions to meet the diverse needs of our clients. 
                     </p>
-      
                 </div>
       
                 <!-- Site Map Section -->
@@ -216,8 +325,6 @@
                                 <i class="fa fa-caret-right mr-2"></i>About Us
                             </a>
                         </li>
-                        
-                        
                         <li>
                             <a href="./injection.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
                                 <i class="fa fa-caret-right mr-2"></i>Products
@@ -256,7 +363,6 @@
                             <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors">operations.medsinehealthcare@gmail.com</a>,
                             <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors px-7">bd.globaltradecorp@gmail.com</a>
                             <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors px-7">operations.gtc88@gmail.com</a>
-      
                         </li>
                     </ul>
                 </div>
@@ -272,27 +378,47 @@
                 </p>
             </div>
         </div>
-      </footer>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                navText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ]
+            });
+
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
-           
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<!-- Initialize Owl Carousel -->
-<script>
-    $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            items: 1,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            navText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ]
-        });
-    });
