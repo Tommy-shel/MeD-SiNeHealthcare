@@ -13,7 +13,7 @@
         .hero-slider .single-slider {
             background-size: cover;
             background-position: center;
-            height: 200px; /* Reduced height for mobile */
+            height: 300px; /* Reduced height for mobile */
             display: flex;
             align-items: center;
         }
@@ -21,13 +21,13 @@
         /* Responsive heights for hero slider */
         @media (min-width: 640px) {
             .hero-slider .single-slider {
-                height: 300px;
+                height: 600px;
             }
         }
         
         @media (min-width: 1024px) {
             .hero-slider .single-slider {
-                height: 350px;
+                height: 650px;
             }
         }
         
@@ -108,6 +108,7 @@
             position: absolute;
             top: 50%;
             width: 100%;
+           
             display: flex;
             justify-content: space-between;
             transform: translateY(-50%);
@@ -327,7 +328,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 relative">
                 <div class="flex items-center space-x-4">
-                    <img src="./logo.jpg" alt="Logo" class="max-h-8 sm:h-8 lg:h-8  rounded-s-xl rounded-e-xl">
+                    <img src="./logo.jpg" alt="Logo" class="max-h-8 sm:h-8 lg:h-8 ">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -357,7 +358,7 @@
     </nav>
 
     <!-- Hero Slider -->
-    <div class="hero-slider owl-carousel owl-theme owl-loaded">
+    <div class="hero-slider owl-carousel owl-theme">
         <div class="single-slider" style="background-image:url(./med.jpg)"></div>
         <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner2.jpg)"></div>
         <div class="single-slider" style="background-image:url(https://priyanpharmaceuticals.com/public//assets/img/banners/banner3.jpg)"></div>
@@ -365,7 +366,7 @@
     </div>
 
     <!-- Call to Action Section -->
-    <div class="container bg-blue-900 mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <!-- <div class="container h-80 bg-blue-900 mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div class="flex flex-col lg:flex-row justify-center lg:items-center">
             <div class="lg:w-7/12">
                 <div class="p-6 sm:p-8 rounded-xl">
@@ -388,7 +389,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Welcome Section -->
     <div class="text-center mt-6 sm:mt-8 px-4">

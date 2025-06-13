@@ -7,26 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-
         .nav-blur {
             backdrop-filter: blur(8px);
             background-color: rgba(255, 255, 255, 0.8);
         }
-      
+        /* Additional styling for mobile menu (optional, but good for visual) */
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50 text-gray-800">
 
-    <!-- Navigation Bar -->
-   
- <nav class="nav-blur border-b border-white/20 sticky top-0 z-50 transition-all duration-300 bg-white">
+    <nav class="nav-blur border-b border-white/20 sticky top-0 z-50 transition-all duration-300 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 relative">
                 <div class="flex items-center space-x-4">
-                    <img src="./Logo.jpeg" alt="Logo" class="h-4 sm:h-12 lg:h-14 rounded-full">
+                    <img src="./logo.jpg" alt="Logo" class="max-h-8 sm:h-8 lg:h-8 ">
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6 lg:space-x-8">
                     <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
                     <a href="products.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Products</a>
@@ -35,18 +34,16 @@
                     <a href="Contact-us.html" class="hover:text-blue-600 text-gray-700 font-semibold">Contact Us</a>
                 </div>
                 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
                     <i class="fas fa-bars text-gray-700"></i>
                 </button>
                 
-                <!-- Mobile Menu -->
-                <div id="mobile-menu" class="mobile-menu">
-                    <a href="index.html">Home</a>
-                    <a href="products.html">Products</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="Country_Presence.html">Global Presence</a>
-                    <a href="Contact-us.html">Contact Us</a>
+                <div id="mobile-dropdown-menu" class="mobile-menu hidden md:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg py-2 space-y-2 text-center">
+                    <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Home</a>
+                    <a href="products.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Products</a>
+                    <a href="about-us.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">About Us</a>
+                    <a href="Country_Presence.html" class="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Global Presence</a>
+                    <a href="Contact-us.html" class="block hover:text-blue-600 text-gray-700 font-semibold py-2">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -54,8 +51,6 @@
     
 
     <div class="container mx-auto px-4 py-8">
-        <!-- Search Bar and Title -->
-        <!-- Removed fixed margins/paddings for better responsiveness -->
         <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
             <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center sm:text-left">Injection LVP List</h1>
             <input
@@ -66,23 +61,18 @@
             />
         </div>
 
-        <!-- Product List Container -->
-        <!-- Ensures horizontal scrolling on small screens if table content is too wide -->
         <div id="product-list" class="mt-1 overflow-x-auto rounded-lg shadow-md"></div>
 
-        <!-- Pagination Controls -->
         <div id="pagination" class="flex flex-col sm:flex-row justify-center items-center mt-8 space-y-2 sm:space-y-0 sm:space-x-4">
-            <button id="prevPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Previous</button>
+            <button id="prevPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Previous</button>
             <span id="pageInfo" class="px-4 py-2 text-gray-700 font-medium">Page 1 of 1</span>
-            <button id="nextPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Next</button>
+            <button id="nextPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Next</button>
         </div>
     </div>
 
-    <!-- Footer Section -->
     <footer id="footer" class="bg-indigo-950 text-white py-8 mt-12 pt-4">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-                <!-- About Us Section -->
                 <div class="space-y-4">
                     <h2 class="text-xl font-bold">Who are we?</h2>
                     <p class="text-gray-400 text-sm leading-relaxed">
@@ -92,7 +82,6 @@
                     </p>
                 </div>
 
-                <!-- Site Map Section -->
                 <div class="space-y-4">
                     <h2 class="text-xl font-bold">Site map</h2>
                     <ul class="space-y-2">
@@ -124,7 +113,6 @@
                     </ul>
                 </div>
 
-                <!-- Contact Us Section -->
                 <div class="space-y-4">
                     <h2 class="text-xl font-bold">CONTACT US</h2>
                     <ul class="space-y-4 text-gray-400 text-sm">
@@ -152,7 +140,6 @@
             </div>
         </div>
 
-        <!-- Copyright Section -->
         <div class="mt-8 border-t border-gray-800 pt-6">
             <div class="container mx-auto px-4 text-center">
                 <p class="text-gray-400 text-sm">
@@ -263,11 +250,14 @@
                 const thead = document.createElement('thead');
                 const headerRow = document.createElement('tr');
                 // Use the keys from the first product to create table headers
-                for (const key of Object.keys(productData[0])) {
-                    const th = document.createElement('th');
-                    th.className = 'py-3 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider';
-                    th.textContent = key;
-                    headerRow.appendChild(th);
+                // This assumes all product objects have the same keys in the same order
+                if (productData.length > 0) { // Check if productData is not empty to avoid errors
+                    for (const key of Object.keys(productData[0])) {
+                        const th = document.createElement('th');
+                        th.className = 'py-3 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider';
+                        th.textContent = key;
+                        headerRow.appendChild(th);
+                    }
                 }
                 thead.appendChild(headerRow);
                 table.appendChild(thead);
@@ -278,11 +268,13 @@
                     const row = document.createElement('tr');
                     row.className = 'hover:bg-gray-50'; // Add hover effect for rows
                     // Populate each row with product data, maintaining column order
-                    for (const key of Object.keys(productData[0])) {
-                        const td = document.createElement('td');
-                        td.className = 'py-3 px-4 border-b border-gray-200 text-sm text-gray-700';
-                        td.textContent = product[key];
-                        row.appendChild(td);
+                    if (productData.length > 0) {
+                        for (const key of Object.keys(productData[0])) {
+                            const td = document.createElement('td');
+                            td.className = 'py-3 px-4 border-b border-gray-200 text-sm text-gray-700';
+                            td.textContent = product[key];
+                            row.appendChild(td);
+                        }
                     }
                     tbody.appendChild(row);
                 }
@@ -354,7 +346,7 @@
 
         // --- Mobile Dropdown Menu Toggle Logic ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu'); // Corrected ID
 
         // Toggle the 'hidden' class to show/hide the dropdown menu
         mobileMenuButton.addEventListener('click', function() {
