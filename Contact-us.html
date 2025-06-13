@@ -20,11 +20,11 @@
         }
         
         .gradient-bg {
-          background: rgb(52, 85, 194);
+            background: rgb(52, 85, 194);
         }
         
         .hero-bg {
-    background: rgb(52, 85, 194);
+            background: rgb(52, 85, 194);
             position: relative;
             overflow: hidden;
         }
@@ -54,8 +54,15 @@
         }
         
         .card-hover:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (min-width: 768px) {
+            .card-hover:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            }
         }
         
         .input-focus {
@@ -63,8 +70,14 @@
         }
         
         .input-focus:focus {
-            transform: scale(1.02);
+            transform: scale(1.01);
             box-shadow: 0 0 0 3px rgba(90, 24, 154, 0.1);
+        }
+        
+        @media (min-width: 768px) {
+            .input-focus:focus {
+                transform: scale(1.02);
+            }
         }
         
         .pulse-animation {
@@ -77,20 +90,27 @@
         }
         
         .gradient-text {
-             background: rgb(52, 85, 194);
+            background: rgb(52, 85, 194);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
         .contact-icon {
-          background: rgb(52, 85, 194);
+            background: rgb(52, 85, 194);
             animation: iconPulse 3s ease-in-out infinite;
         }
         
         @keyframes iconPulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @media (min-width: 768px) {
+            @keyframes iconPulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
         }
         
         .form-gradient {
@@ -102,33 +122,131 @@
             background: rgba(255, 255, 255, 0.95);
         }
 
-        /* Mobile Menu Styles */
+        /* Mobile Menu Styles - Enhanced */
         .mobile-menu {
-            display: none; /* Hidden by default */
+            display: none;
             flex-direction: column;
             width: 100%;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
             border-top: 1px solid #e2e8f0;
-            position: absolute; /* Positioned relative to the nav */
-            top: 100%; /* Appears directly below the navbar */
+            position: absolute;
+            top: 100%;
             left: 0;
             padding: 1rem 0;
-            z-index: 100; /* Ensure it's above other content */
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .mobile-menu.active {
-            display: flex; /* Show when active */
+            display: flex;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .mobile-menu a {
-            padding: 0.75rem 1rem;
+            padding: 1rem 1.5rem;
             color: #4a5568;
             font-weight: 500;
-            transition: background-color 0.2s;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
         }
 
         .mobile-menu a:hover {
             background-color: #edf2f7;
+            border-left-color: rgb(52, 85, 194);
+            color: rgb(52, 85, 194);
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem;
+                line-height: 1.1;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+                line-height: 1.5;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .card-title {
+                font-size: 1.125rem;
+            }
+        }
+
+        /* Enhanced Grid Responsiveness */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Footer Responsive Improvements */
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-section {
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        /* Form Responsive Enhancements */
+        @media (max-width: 640px) {
+            .form-container {
+                padding: 1.5rem;
+                margin: 1rem;
+                border-radius: 1.5rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* Contact Card Responsive Improvements */
+        .contact-card {
+            break-inside: avoid;
+        }
+
+        @media (max-width: 640px) {
+            .contact-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            .contact-icon i {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
@@ -138,75 +256,75 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
-                    <img src="./Logo.jpeg" alt="MeD-SiNE Healthcare Logo" class="h-14 mr-12 rounded-full">
+                    <img src="./Logo.jpeg" alt="MeD-SiNE Healthcare Logo" class="h-10 sm:h-12 md:h-14 mr-4 sm:mr-8 md:mr-12 rounded-full">
                 </div>
                 
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
-                    <a href="products.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Products</a>
-                    <a href="about-us.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">About Us</a>
-                    <a href="Country_Presence.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Global Presence</a>
-                    <a href="Contact-us.html" class="hover:text-blue-600 text-gray-700 font-semibold">Contact Us</a>
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm lg:text-base">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm lg:text-base">Products</a>
+                    <a href="about-us.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm lg:text-base">About Us</a>
+                    <a href="Country_Presence.html" class="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm lg:text-base">Global Presence</a>
+                    <a href="Contact-us.html" class="hover:text-blue-600 text-gray-700 font-semibold text-sm lg:text-base">Contact Us</a>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
-                    <i class="fas fa-bars text-gray-700"></i>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 transition-all">
+                    <i class="fas fa-bars text-gray-700 text-lg"></i>
                 </button>
             </div>
             <!-- Mobile Menu content -->
             <div id="mobile-menu" class="mobile-menu md:hidden">
-                <a href="index.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors px-4 py-2">Home</a>
-                <a href="products.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors px-4 py-2">Products</a>
-                <a href="about-us.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors px-4 py-2">About Us</a>
-                <a href="Country_Presence.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors px-4 py-2">Global Presence</a>
-                <a href="Contact-us.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors px-4 py-2">Contact Us</a>
+                <a href="index.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors">Home</a>
+                <a href="products.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors">Products</a>
+                <a href="about-us.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="Country_Presence.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors">Global Presence</a>
+                <a href="Contact-us.html" class="block text-gray-700 hover:bg-purple-50 hover:text-blue-600 transition-colors">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg py-24 relative">
+    <section class="hero-bg py-12 sm:py-16 md:py-20 lg:py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="floating-animation">
-                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
                     Get In <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-pink-200">Touch</span>
                 </h1>
-                <p class="text-xl text-purple-100 max-w-2xl mx-auto leading-relaxed">
+                <p class="hero-subtitle text-lg sm:text-xl text-purple-100 max-w-2xl mx-auto leading-relaxed px-4">
                     Ready to transform your healthcare experience? We'd love to hear from you.
                 </p>
             </div>
             
-            <!-- Decorative elements (ensure z-index is lower than the mobile menu) -->
-            <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl z-0"></div>
-            <div class="absolute bottom-10 right-10 w-32 h-32 bg-purple-300/30 rounded-full blur-2xl z-0"></div>
+            <!-- Decorative elements -->
+            <div class="absolute top-4 sm:top-10 left-4 sm:left-10 w-16 sm:w-20 h-16 sm:h-20 bg-white/10 rounded-full blur-xl z-0"></div>
+            <div class="absolute bottom-4 sm:bottom-10 right-4 sm:right-10 w-24 sm:w-32 h-24 sm:h-32 bg-purple-300/30 rounded-full blur-2xl z-0"></div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 relative">
+    <section class="py-12 sm:py-16 lg:py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="contact-grid grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
                 
                 <!-- Contact Information -->
-                <div class="space-y-8">
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-4">Let's Start a Conversation</h2>
-                        <p class="text-xl text-gray-600 leading-relaxed">
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="text-center lg:text-left">
+                        <h2 class="section-title text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Let's Start a Conversation</h2>
+                        <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             Whether you have questions about our products, need support, or want to explore partnership opportunities, we're here to help.
                         </p>
                     </div>
                     
                     <!-- Contact Cards -->
-                    <div class="space-y-6">
+                    <div class="space-y-4 sm:space-y-6">
                         <!-- Warehouse Address -->
-                        <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                            <div class="flex items-start space-x-4">
-                                <div class="contact-icon w-16  h-16 rounded-2xl flex items-center justify-center text-white flex-shrink-0">
-                                    <i class="fas fa-warehouse text-2xl"></i>
+                        <div class="contact-card card-hover bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <div class="contact-icon w-12 sm:w-16 h-12 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-white flex-shrink-0">
+                                    <i class="fas fa-warehouse text-lg sm:text-2xl"></i>
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Warehouse Address</h3>
-                                    <p class="text-gray-600 leading-relaxed">
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="card-title text-lg sm:text-xl font-semibold text-gray-900 mb-2">Warehouse Address</h3>
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed break-words">
                                         FF/5, THE VALENCIA,<br>
                                         B/H PRIYA CINEMA,<br>
                                         SEVASI BHAYLI CANAL ROAD,<br>
@@ -217,14 +335,14 @@
                         </div>
                         
                         <!-- Communication Address -->
-                        <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                            <div class="flex items-start space-x-4">
-                                <div class="contact-icon w-16 h-16 rounded-2xl flex items-center justify-center text-white flex-shrink-0">
-                                    <i class="fas fa-building text-2xl"></i>
+                        <div class="contact-card card-hover bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100">
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <div class="contact-icon w-12 sm:w-16 h-12 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-white flex-shrink-0">
+                                    <i class="fas fa-building text-lg sm:text-2xl"></i>
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Communication Address</h3>
-                                    <p class="text-gray-600 leading-relaxed">
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="card-title text-lg sm:text-xl font-semibold text-gray-900 mb-2">Communication Address</h3>
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed break-words">
                                         H 704, Dr Babasaheb Ambedkar CHS,<br>
                                         Senapati Bapat Road,<br>
                                         Dadar (W) 400 028
@@ -234,23 +352,24 @@
                         </div>
                         
                         <!-- Quick Contact -->
-                        <div class="card-hover rounded-2xl p-8 shadow-lg text-white" style="background: rgb(52, 85, 194); ">
+                        <div class="contact-card card-hover rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg text-white" style="background: rgb(52, 85, 194);">
                             <div class="space-y-4">
-                                <h3 class="text-xl font-semibold mb-4">Quick Contact</h3>
-                                <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3">
-                                    <i class="fas fa-phone text-lg"></i>
-                                    <div>
-                                        <a href="tel:+918691016407" class="hover:underline">+91 86910 16407</a>
-                                        <span class="hidden sm:inline mx-2">•</span>
-                                        <a href="tel:+919137202764" class="hover:underline block sm:inline">+91 91372 02764</a>
+                                <h3 class="card-title text-lg sm:text-xl font-semibold mb-4">Quick Contact</h3>
+                                <div class="space-y-3">
+                                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3">
+                                        <i class="fas fa-phone text-base sm:text-lg flex-shrink-0"></i>
+                                        <div class="flex flex-col space-y-1 sm:space-y-0 sm:flex-row sm:space-x-3 break-all sm:break-normal">
+                                            <a href="tel:+918691016407" class="hover:underline text-sm sm:text-base">+91 86910 16407</a>
+                                            <a href="tel:+919137202764" class="hover:underline text-sm sm:text-base">+91 91372 02764</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <i class="fas fa-envelope text-lg mt-1"></i>
-                                    <div class="space-y-1">
-                                        <div><a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:underline text-sm">operations.medsinehealthcare@gmail.com</a></div>
-                                        <div><a href="mailto:bd.globaltradecorp@gmail.com" class="hover:underline text-sm">bd.globaltradecorp@gmail.com</a></div>
-                                        <div><a href="mailto:operations.gtc88@gmail.com" class="hover:underline text-sm">operations.gtc88@gmail.com</a></div>
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-envelope text-base sm:text-lg mt-1 flex-shrink-0"></i>
+                                        <div class="space-y-1 flex-1 min-w-0">
+                                            <div><a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:underline text-xs sm:text-sm break-all">operations.medsinehealthcare@gmail.com</a></div>
+                                            <div><a href="mailto:bd.globaltradecorp@gmail.com" class="hover:underline text-xs sm:text-sm break-all">bd.globaltradecorp@gmail.com</a></div>
+                                            <div><a href="mailto:operations.gtc88@gmail.com" class="hover:underline text-xs sm:text-sm break-all">operations.gtc88@gmail.com</a></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -259,53 +378,53 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div class="lg:sticky lg:top-8 mt-12 lg:mt-0">
-                    <div class="form-gradient rounded-3xl p-8 shadow-2xl border border-gray-200">
-                        <div class="text-center mb-8">
-                            <h3 class="text-3xl text-blue-600 font-bold gradient-text mb-3">Send us a Message</h3>
-                            <p class="text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <div class="lg:sticky lg:top-8 mt-8 lg:mt-0">
+                    <div class="form-container form-gradient rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-200">
+                        <div class="text-center mb-6 sm:mb-8">
+                            <h3 class="text-2xl sm:text-3xl text-blue-600 font-bold gradient-text mb-2 sm:mb-3">Send us a Message</h3>
+                            <p class="text-sm sm:text-base text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
                         </div>
                         
-                        <form id="contactForm" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <form id="contactForm" class="space-y-4 sm:space-y-6">
+                            <div class="form-grid grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                 <div>
                                     <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
                                     <input type="text" id="name" name="name" required
-                                        class="input-focus w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all"
+                                        class="input-focus w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all text-sm sm:text-base"
                                         placeholder="Enter your full name">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
                                     <input type="email" id="email" name="email" required
-                                        class="input-focus w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all"
+                                        class="input-focus w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all text-sm sm:text-base"
                                         placeholder="Enter your email">
                                 </div>
                             </div>
                             
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="form-grid grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                 <div>
                                     <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
                                     <input type="tel" id="phone" name="phone" required
-                                        class="input-focus w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all"
+                                        class="input-focus w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all text-sm sm:text-base"
                                         placeholder="Enter your phone">
                                 </div>
                                 <div>
                                     <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
                                     <input type="text" id="subject" name="subject" required
-                                        class="input-focus w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all"
+                                        class="input-focus w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all text-sm sm:text-base"
                                         placeholder="What's this about?">
                                 </div>
                             </div>
                             
                             <div>
                                 <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Your Message</label>
-                                <textarea id="message" name="message" rows="5" required
-                                    class="input-focus w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all resize-none"
+                                <textarea id="message" name="message" rows="4" required
+                                    class="input-focus w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl border border-gray-200 focus:border-purple-500 focus:outline-none transition-all resize-none text-sm sm:text-base"
                                     placeholder="Tell us more about your inquiry..."></textarea>
                             </div>
                             
                             <button type="submit" 
-                                class="w-full text-white font-semibold py-4 px-8 rounded-xl hover:opacity-90 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                                class="w-full text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl hover:opacity-90 transform hover:scale-105 transition-all duration-200 shadow-lg text-sm sm:text-base"
                                 style="background: rgb(52, 85, 194);">
                                 <i class="fas fa-paper-plane mr-2"></i>
                                 Send Message
@@ -318,14 +437,14 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="bg-indigo-950 text-white py-8 mt-5 pt-4">
+    <footer id="footer" class="bg-indigo-950 text-white py-6 sm:py-8 mt-5 pt-4">
         <!-- Footer Top -->
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="footer-grid grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 <!-- About Us Section -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold">Who are we?</h2>
-                    <p class="text-gray-400 text-justify">
+                <div class="footer-section space-y-4">
+                    <h2 class="text-lg sm:text-xl font-bold">Who are we?</h2>
+                    <p class="text-gray-400 text-sm sm:text-base text-justify leading-relaxed">
                         We are MeD-SiNE Healthcare, we specialize in delivering high-quality, innovative solutions to meet your unique healthcare needs. 
                         We were established in 2020 and with support from our esteem clients incorporated in 2024. 
                         We focus on quality, innovation, and customer satisfaction,
@@ -334,31 +453,31 @@
                 </div>
 
                 <!-- Site Map Section -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold">Site map</h2>
+                <div class="footer-section space-y-4">
+                    <h2 class="text-lg sm:text-xl font-bold">Site map</h2>
                     <ul class="space-y-2">
                         <li>
-                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>Home
                             </a>
                         </li>
                         <li>
-                            <a href="about-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <a href="about-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>About Us
                             </a>
                         </li>
                         <li>
-                            <a href="products.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <a href="products.html" class="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>Products
                             </a>
                         </li>
                         <li>
-                            <a href="Contact-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <a href="Contact-us.html" class="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>Contact Us
                             </a>
                         </li>
                         <li>
-                            <a href="Country_Presence.html" class="text-gray-400 hover:text-white transition-colors flex items-center">
+                            <a href="Country_Presence.html" class="text-gray-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>Global Presence
                             </a>
                         </li>
@@ -366,28 +485,34 @@
                 </div>
 
                 <!-- Contact Us Section -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold">CONTACT US</h2>
-                    <ul class="space-y-4 text-gray-400">
+                <div class="footer-section space-y-4">
+                    <h2 class="text-lg sm:text-xl font-bold">CONTACT US</h2>
+                    <ul class="space-y-3 sm:space-y-4 text-gray-400">
                         <li class="flex items-start">
-                            <i class="fa fa-map-marker mt-1 mr-2"></i>
-                            <span>
+                            <i class="fa fa-map-marker mt-1 mr-2 flex-shrink-0"></i>
+                            <span class="text-sm sm:text-base break-words">
                                 H 704, Dr Babasaheb Ambedkar CHS, Senapati Bapat Road, Dadar (W) 400 028
                             </span>
                         </li>
-                        <li class="flex flex-col items-start sm:flex-row sm:items-center">
-                            <i class="fa fa-phone mr-2 mt-1 sm:mt-0"></i>
-                            <div class="flex flex-col sm:flex-row sm:space-x-2">
-                                <a href="tel:+918691016407" class="hover:text-white transition-colors">+91 86910 16407</a>
-                                <a href="tel:+919137202764" class="hover:text-white transition-colors">+91 91372 02764</a>
+                        <li class="flex flex-col items-start">
+                            <div class="flex items-center mb-1">
+                                <i class="fa fa-phone mr-2"></i>
+                                <span class="text-sm sm:text-base">Phone:</span>
+                            </div>
+                            <div class="pl-6 space-y-1">
+                                <a href="tel:+918691016407" class="hover:text-white transition-colors text-sm sm:text-base block">+91 86910 16407</a>
+                                <a href="tel:+919137202764" class="hover:text-white transition-colors text-sm sm:text-base block">+91 91372 02764</a>
                             </div>
                         </li>
-                        <li class="items-center">
-                            <i class="fa fa-envelope mr-2"></i>
-                            <div class="flex flex-col items-start">
-                                <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors text-sm">operations.medsinehealthcare@gmail.com</a>
-                                <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors text-sm">bd.globaltradecorp@gmail.com</a>
-                                <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors text-sm">operations.gtc88@gmail.com</a>
+                        <li>
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-envelope mr-2"></i>
+                                <span class="text-sm sm:text-base">Email:</span>
+                            </div>
+                            <div class="pl-6 space-y-1">
+                                <a href="mailto:operations.medsinehealthcare@gmail.com" class="hover:text-white transition-colors text-xs sm:text-sm block break-all">operations.medsinehealthcare@gmail.com</a>
+                                <a href="mailto:bd.globaltradecorp@gmail.com" class="hover:text-white transition-colors text-xs sm:text-sm block break-all">bd.globaltradecorp@gmail.com</a>
+                                <a href="mailto:operations.gtc88@gmail.com" class="hover:text-white transition-colors text-xs sm:text-sm block break-all">operations.gtc88@gmail.com</a>
                             </div>
                         </li>
                     </ul>
@@ -396,9 +521,9 @@
         </div>
 
         <!-- Copyright Section -->
-        <div class="mt-8 border-t border-gray-800 pt-6">
+        <div class="mt-6 sm:mt-8 border-t border-gray-800 pt-4 sm:pt-6">
             <div class="container mx-auto px-4 text-center">
-                <p class="text-gray-400">
+                <p class="text-gray-400 text-xs sm:text-sm">
                     © Copyright 2025 | All Rights Reserved by
                     <a href="#" target="_blank" class="text-white hover:underline">MeD-SiNE Healthcare.com</a>
                 </p>
@@ -406,70 +531,59 @@
         </div>
     </footer>
 
-    <!-- jQuery (Optional, but used in your provided code) -->
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            // Mobile menu toggle
+            // Mobile menu toggle with improved animation
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
-            mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
                 mobileMenu.classList.toggle('active');
-            });
-            
-            // Form submission handling (your existing code)
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
-                e.preventDefault();
                 
-                const formData = new FormData(this);
-                const formObject = Object.fromEntries(formData);
-                
-                const button = this.querySelector('button[type="submit"]');
-                const originalText = button.innerHTML;
-                
-                button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-                button.disabled = true;
-                
-                setTimeout(() => {
-                    button.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
-                    button.classList.remove('from-blue-500', 'to-purple-600'); // Assuming these were on the button
-                    button.classList.add('from-green-500', 'to-green-600');
-                    
-                    setTimeout(() => {
-                        button.innerHTML = originalText;
-                        button.disabled = false;
-                        button.classList.remove('from-green-500', 'to-green-600');
-                        button.classList.add('from-blue-500', 'to-purple-600'); // Revert to original
-                        this.reset();
-                    }, 3000);
-                }, 2000);
-            });
-            
-            // Smooth scroll for anchor links (your existing code)
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-            
-            // Add scroll effect to navigation (your existing code)
-            window.addEventListener('scroll', function() {
-                const nav = document.querySelector('nav');
-                if (window.scrollY > 100) {
-                    nav.classList.add('shadow-lg');
+                // Toggle button icon
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
                 } else {
-                    nav.classList.remove('shadow-lg');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
                 }
             });
-        });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                   });
+
+            // Close mobile menu when clicking on a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Close mobile menu on window resize if desktop view
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            })
+            });
     </script>
 </body>
 </html>
