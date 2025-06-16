@@ -63,7 +63,7 @@
         <!-- Search Bar and Title -->
         <!-- Removed fixed margins/paddings for better responsiveness -->
         <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
-            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center sm:text-left">Creams List</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center sm:text-left">Syrups List</h1>
             <input
                 type="text"
                 id="searchInput"
@@ -78,9 +78,9 @@
 
         <!-- Pagination Controls -->
         <div id="pagination" class="flex flex-col sm:flex-row justify-center items-center mt-8 space-y-2 sm:space-y-0 sm:space-x-4">
-            <button id="prevPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Previous</button>
+            <button id="prevPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Previous</button>
             <span id="pageInfo" class="px-4 py-2 text-gray-700 font-medium">Page 1 of 1</span>
-            <button id="nextPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Next</button>
+            <button id="nextPage" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors">Next</button>
         </div>
     </div>
 
@@ -172,47 +172,472 @@
     <script>
         // JSON data containing the product list
         const productData = [
-            { "Sr.No.": 1, "Product Name": "Anti-haemorrhage (lidocaine 20 mg + bismuth subgallate 70mg + zinc oxide 250mg) 30g tube Cream", "Product Code": "", "Strength": "20mg+70mg+250mg", "Dosage form": "Cream", "Pack Size": "30g tube" },
-            { "Sr.No.": 2, "Product Name": "Betamethasone", "Product Code": "MDL", "Strength": "0.001 Tube 30g Cream", "Dosage form": "Cream", "Pack Size": "30g tube" },
-            { "Sr.No.": 3, "Product Name": "Calcipotriol", "Product Code": "", "Strength": "0.0001 Tube 100g Cream", "Dosage form": "Cream", "Pack Size": "100g cream" },
-            { "Sr.No.": 4, "Product Name": "Clotrimazole", "Product Code": "MDL", "Strength": "0.01 Tube 30g Cream", "Dosage form": "Cream", "Pack Size": "30g cream" },
-            { "Sr.No.": 5, "Product Name": "Fusidic Acid", "Product Code": "", "Strength": "0.02 Tube 15g Cream", "Dosage form": "Cream", "Pack Size": "15g cream" },
-            { "Sr.No.": 6, "Product Name": "Ketoconazole", "Product Code": "MDL", "Strength": "2% 30g Cream", "Dosage form": "Cream", "Pack Size": "30g cream" },
-            { "Sr.No.": 7, "Product Name": "Silver Sulfadiazine", "Product Code": "MDL", "Strength": "1% m/m Tube 50 Cream", "Dosage form": "Cream", "Pack Size": "50g cream" },
-            { "Sr.No.": 8, "Product Name": "Silver Sulfadiazine", "Product Code": "MDL", "Strength": "1% m/m 250g Cream", "Dosage form": "Cream", "Pack Size": "250g cream" },
-            { "Sr.No.": 9, "Product Name": "Silver Sulfadiazine & Chlorhexidine Gluconate", "Product Code": "", "Strength": "Silver Sulphate 1.0% w/w, Chlorhexidine Gluconote 2.0% w/w", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 10, "Product Name": "Silver Sulfadiazine, Lignocaine Hydrochloride & Chlorhexidine Gluconate", "Product Code": "", "Strength": "Silver Suldadiazine 1%, Lignocaine Hydrochloride 2.00%, Chlorhexidine Gluconate 0.2%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 11, "Product Name": "Urea", "Product Code": "MDL", "Strength": "0.2 Tube 30g Cream", "Dosage form": "Cream", "Pack Size": "30g cream" },
-            { "Sr.No.": 12, "Product Name": "Hydroquinone, Tretinoin and Mometasone furoate Cream", "Product Code": "", "Strength": "Hydroquinone 2.0% w/w, Tretinoin 0.025% w/w, Mometasone furoate 0.1% w/w", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 13, "Product Name": "Clobetasol Propionate", "Product Code": "", "Strength": "0.05%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 14, "Product Name": "Clobetasol Propionate and Salicylic Acid", "Product Code": "", "Strength": "Clobetasol Propionate 0.05% w/w, Salicylic Acid 3.00% w/w", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 15, "Product Name": "Mometasone", "Product Code": "", "Strength": "0.10%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 16, "Product Name": "Betamethasone Valerate and Salicylic Acid", "Product Code": "", "Strength": "Betamethasone 0.10% w/w, Salicylic Acid 3% w/w", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 17, "Product Name": "Betamethasone Valerate and Neomycin", "Product Code": "", "Strength": "Betamethasone 0.10%, Neomycin Sulphate 0.5%, Chlorocresol 0.1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 18, "Product Name": "Betamethasone and Fusidic Acid", "Product Code": "", "Strength": "Betamethasone 0.10%, Fusidic Acid 2%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 19, "Product Name": "Mupirocin Ointment", "Product Code": "", "Strength": "2.00%", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 20, "Product Name": "Clobetasol Propionate, Gentamicin", "Product Code": "", "Strength": "Clobetasol Propionate 0.05% w/w, Gentamicin Sulphate 0.1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 21, "Product Name": "Clobetasol Propionate, Gentamicin, and Miconazole Nitrate", "Product Code": "", "Strength": "Clobetasol Propionate 0.05%, Gentamicin 0.1%, Miconazole Nitrate 2.0%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 22, "Product Name": "Clobestol Propionate, Neomycin Sulphate and Miconazole Notrate", "Product Code": "", "Strength": "Clobetasol Propionate 0.05%, Neomycin 0.1%, Miconazole Nitrate 2.0%, Chlorocresol 0.1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 23, "Product Name": "Clobestol Propionate, Neomycin Sulphate and Miconazole Notrate", "Product Code": "", "Strength": "Clobetasol Propionate 0.05%, Neomycin 0.5%, Miconazole Nitrate 2.0%, Chlorocresol 0.2%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 24, "Product Name": "Clobetasol Propionate, Gentamicin, Iodochloerhydroxyquinoline, Tolnaftate and Clotrimazole", "Product Code": "", "Strength": "Clobetasol Propionate 0.5%, Gentamicin 0.10%, Iodochloerhydroxyquinoline 1.00%, Clotrimazole 1.0%, Chlorocrisol 0.10%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 25, "Product Name": "Clobetasol Propionate, Gentamicin, Iodochloerhydroxyquinoline, Tolnaftate and Ketoconazole", "Product Code": "", "Strength": "Clobetasol Propionate 0.5%, Gentamicin 0.10%, Iodochloerhydroxyquinoline 1.00%, Ketoconazole 2%, Chlorocrisol 0.11%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 26, "Product Name": "Clobetasol Propionate, Gentamicin, Miconazole Nitrate and Clotrimazole Cream", "Product Code": "", "Strength": "Clobetasol Propionate 0.05%, Gentamicin 0.10%, Miconazole Nitrate 2.0%, Clotrimazole 1.0%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 27, "Product Name": "Beclomethasone Dipropionate, Clotrimazole and Neomycin", "Product Code": "", "Strength": "Beclomethasone Dipropionate 0.025%, Clotrimazole 1.0%, Neomycin Base 0.35%, Chlorocresol 0.1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 28, "Product Name": "Beclomethasone Dipropionate, Clotrimazole and Neomycin Sulphate", "Product Code": "", "Strength": "Beclomethasone Dipropionate 0.025%, Clotrimazole 1.0%, Neomycin Sulphate 0.5%, Chlorocresol 0.1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 29, "Product Name": "Beclomethasone Dipropionate and Clotrimazole", "Product Code": "", "Strength": "Beclomethasone Dipropionate 0.025%, Clotrimazole 1%, Chlorocresol 0.1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 30, "Product Name": "Luliconazole", "Product Code": "", "Strength": "1%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 31, "Product Name": "Miconazole", "Product Code": "", "Strength": "2%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 32, "Product Name": "Miconazole Nitrate and Fluocinolone Acetonide", "Product Code": "", "Strength": "Miconazole Notrate 2.0%, Flucinolone Acetonide 0.01%", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 33, "Product Name": "Luliconazole and Clobetasol Propionate", "Product Code": "", "Strength": "Luliconazole 1%, Clobetasol Propionate 0.05%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 34, "Product Name": "Permethrin Cream", "Product Code": "", "Strength": "5%", "Dosage form": "Cream", "Pack Size": "" },
-            { "Sr.No.": 35, "Product Name": "Povidone-Iodine Ointment", "Product Code": "MDL", "Strength": "5%", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 36, "Product Name": "Povidone-Iodine Ointment", "Product Code": "MDL", "Strength": "10%", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 37, "Product Name": "Metronidazole and Povidone Iodine", "Product Code": "", "Strength": "Metronidazole 2.0%, Povidone-Iodine 10.0%", "Dosage form": "Ointment", "Pack Size": "" },
-            { "Sr.No.": 38, "Product Name": "Aciclovir Cream", "Product Code": "SVP", "Strength": "5.00%", "Dosage form": "Cream", "Pack Size": "" }
-        ];
+            {
+        "Sr.No.": 1,
+        "Product Name": "Albendazole",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "10ml"
+    },
+    {
+        "Sr.No.": 2,
+        "Product Name": "Anti-Cold",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "100ml, 50ml"
+    },
+    {
+        "Sr.No.": 3,
+        "Product Name": "Bromohexine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 4,
+        "Product Name": "Calcium With Vitamine D-3",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "200ml"
+    },
+    {
+        "Sr.No.": 5,
+        "Product Name": "Chloramphenicol",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 6,
+        "Product Name": "Chloroquine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 7,
+        "Product Name": "Chlorpheniramine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 8,
+        "Product Name": "Chlorpheniramine",
+        "Product Code": "SYP",
+        "Strength": "2mg/5mL",
+        "Dosage form": "Syrups",
+        "Pack Size": "100 ml oral solution"
+    },
+    {
+        "Sr.No.": 9,
+        "Product Name": "Citrazine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 10,
+        "Product Name": "Clarithromycin",
+        "Product Code": "",
+        "Strength": "250 mg/5mL",
+        "Dosage form": "Suspension",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 11,
+        "Product Name": "Co-trimoxazole",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "50ml"
+    },
+    {
+        "Sr.No.": 12,
+        "Product Name": "Cotrimoxazole (Sulfamethoxazole + Trimethoprim)",
+        "Product Code": "SYP",
+        "Strength": "200mg SMX+ 40mg TMP/5 mL",
+        "Dosage form": "Suspension",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 13,
+        "Product Name": "Cyprohyptadine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "100ml, 200ml"
+    },
+    {
+        "Sr.No.": 14,
+        "Product Name": "Dextromethorphen",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 15,
+        "Product Name": "Dicyclomine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Drop",
+        "Pack Size": "15ml"
+    },
+    {
+        "Sr.No.": 16,
+        "Product Name": "Domperidone",
+        "Product Code": "SYP",
+        "Strength": "1 mg / ml",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 17,
+        "Product Name": "Domperidone",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 18,
+        "Product Name": "Erythromycine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 19,
+        "Product Name": "Ferrous Gluconate",
+        "Product Code": "CP",
+        "Strength": "30 mg elemental iron/5mL",
+        "Dosage form": "Syrups",
+        "Pack Size": "200 ml"
+    },
+    {
+        "Sr.No.": 20,
+        "Product Name": "Fluconazole",
+        "Product Code": "",
+        "Strength": "50 mg/5mL",
+        "Dosage form": "Suspension",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 21,
+        "Product Name": "Furazolidone",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 22,
+        "Product Name": "Furosemide",
+        "Product Code": "",
+        "Strength": "20 mg/5 mL",
+        "Dosage form": "Solution",
+        "Pack Size": "60 ml"
+    },
+    {
+        "Sr.No.": 23,
+        "Product Name": "Ibu.+Para.",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 24,
+        "Product Name": "Ibuprofen",
+        "Product Code": "SYP",
+        "Strength": "100 mg / 5 ml",
+        "Dosage form": "Syrup",
+        "Pack Size": "50ml"
+    },
+    {
+        "Sr.No.": 25,
+        "Product Name": "Iodine Aqueous solution (Lugol)",
+        "Product Code": "",
+        "Strength": "130 mg total iodine/mL",
+        "Dosage form": "Solution",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 26,
+        "Product Name": "Iron+Multivitamine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "100ml, 200ml"
+    },
+    {
+        "Sr.No.": 27,
+        "Product Name": "Isoniazid",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 28,
+        "Product Name": "Lactulose",
+        "Product Code": "CP",
+        "Strength": "100mg/5ml",
+        "Dosage form": "Syrups",
+        "Pack Size": "200 ml"
+    },
+    {
+        "Sr.No.": 29,
+        "Product Name": "Metoclopramide",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 30,
+        "Product Name": "Metronidazole",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 31,
+        "Product Name": "Multivitamine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Drop",
+        "Pack Size": "10ml, 15ml"
+    },
+    {
+        "Sr.No.": 32,
+        "Product Name": "Multivitamine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "100ml, 200ml"
+    },
+    {
+        "Sr.No.": 33,
+        "Product Name": "Nimesulide",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 34,
+        "Product Name": "Nor.+Metro.",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 35,
+        "Product Name": "Nor.+Tini.",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 36,
+        "Product Name": "Norfloxacine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "30ml, 60ml"
+    },
+    {
+        "Sr.No.": 37,
+        "Product Name": "Ofloxacine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 38,
+        "Product Name": "Ofloxacine+Metro.",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 39,
+        "Product Name": "Omeprazole",
+        "Product Code": "SYP",
+        "Strength": "2 mg/mL",
+        "Dosage form": "Suspension",
+        "Pack Size": "50 ml"
+    },
+    {
+        "Sr.No.": 40,
+        "Product Name": "Para + Promethazine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 41,
+        "Product Name": "Paracetamol",
+        "Product Code": "SYP",
+        "Strength": "250 mg/ 5 mL",
+        "Dosage form": "Suspension",
+        "Pack Size": "100 ml"
+    },
+    {
+        "Sr.No.": 42,
+        "Product Name": "Paracetamol",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 43,
+        "Product Name": "Paracetamol",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 44,
+        "Product Name": "Paracetamole",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Drop",
+        "Pack Size": "15ml"
+    },
+    {
+        "Sr.No.": 45,
+        "Product Name": "Phenobarbital",
+        "Product Code": "",
+        "Strength": "15mg/5mL",
+        "Dosage form": "Solution",
+        "Pack Size": ""
+    },
+    {
+        "Sr.No.": 46,
+        "Product Name": "Promethazine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 47,
+        "Product Name": "Quinine",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "50ml"
+    },
+    {
+        "Sr.No.": 48,
+        "Product Name": "Salbutamol",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 49,
+        "Product Name": "Salbutamol+Bromo.",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml"
+    },
+    {
+        "Sr.No.": 50,
+        "Product Name": "Sodium Valproate",
+        "Product Code": "",
+        "Strength": "200mg/5mL",
+        "Dosage form": "Syrups",
+        "Pack Size": "300 ml"
+    },
+    {
+        "Sr.No.": 51,
+        "Product Name": "Sorbi-M (Trichloine Citrate+Sorbitol)",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "100ml, 200ml"
+    },
+    {
+        "Sr.No.": 52,
+        "Product Name": "Synadril (Cough)",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "100ml, 50ml"
+    },
+    {
+        "Sr.No.": 53,
+        "Product Name": "Synalka (Alkaliser 1.25 Gm)",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "100ml"
+    },
+    {
+        "Sr.No.": 54,
+        "Product Name": "Syncid (Antacid)",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "170ml"
+    },
+    {
+        "Sr.No.": 55,
+        "Product Name": "Syndal-M (Metro.+Fura.)",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "60ml, 30ml"
+    },
+    {
+        "Sr.No.": 56,
+        "Product Name": "Synoworm (Mebendazole)",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml"
+    },
+    {
+        "Sr.No.": 57,
+        "Product Name": "Terbutaline Sulphate+Bromo+Guai+phensine+Menthal",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Syrup",
+        "Pack Size": "60ml, 100ml"
+    },
+    {
+        "Sr.No.": 58,
+        "Product Name": "Tinidazole",
+        "Product Code": "SYP",
+        "Strength": "",
+        "Dosage form": "Suspension",
+        "Pack Size": "30ml, 60ml"
+    }    ];
 
-        const itemsPerPage = 5; // Number of items to display per page
+        const itemsPerPage = 10; // Number of items to display per page
         let currentPage = 1;
 
         /**
