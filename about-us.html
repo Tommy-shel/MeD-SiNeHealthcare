@@ -6,28 +6,24 @@
     <title>MeD-SiNE Healthcare</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .about-us-section {
-            padding: 100px 0; /* Adjust padding as needed */
-            color: #eff0f6; /* Light text color for better contrast */
-            text-align: center; /* Center-align text */
-            position: relative;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+   <style>
+        .owl-carousel .item img {
+            width: 100%;
             height: 400px;
+            object-fit: cover;
         }
-        .about-us-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(18, 8, 93, 0.5); /* Dark overlay for better readability */
-            z-index: 1;
-        }
-        .about-us-section .container {
+        
+       .about-us-section {
+            padding: 80px 0;
+            color: #ffffff;
+            text-align: center;
             position: relative;
-            z-index: 2;
         }
+        
         .about-us-section h1 {
             font-size: 36px;
             margin-bottom: 20px;
@@ -35,6 +31,84 @@
         .about-us-section p {
             font-size: 18px;
             line-height: 1.6;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .slide-1 { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
+        .slide-2 { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
+        .slide-3 { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
+        .slide-4 { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .slider-nav:hover {
+            background: rgba(255,255,255,1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        .slider-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.2);
         }
 
         /* Mobile Menu Styles */
@@ -63,6 +137,21 @@
 
         .mobile-menu a:hover {
             background-color: #edf2f7;
+        }
+
+        @media (max-width: 768px) {
+            .slider-container {
+                margin: 20px;
+            }
+            .slide {
+                height: 250px;
+                font-size: 18px;
+            }
+            .slider-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -95,6 +184,12 @@
             </div>
         </div>
     </nav>
+  <div class="owl-carousel owl-theme">
+        <div class="item"><img src="./product1.jpg" alt="Image 1"></div>
+        <div class="item"><img src="./product2.jpg" alt="Image 2"></div>
+        <div class="item"><img src="./Picture1.png" alt="Image 3"></div>
+        <div class="item"><img src="./mahesh lab1.jpg" alt="Image 4"></div>
+    </div>
 
     <div class="about-us-section" style="background-image: url('./testtube.jpg'); background-size: cover; background-position: center;">
         <div class="container mx-auto px-4">
@@ -102,22 +197,28 @@
         </div>
     </div>
 
+
     <div class="container mx-auto px-4 py-8">
         <div class="text-center mt-3 font-bold text-2xl md:text-3xl text-indigo-900">
             WELCOME <br> TO <br> MeD-SiNE HEALTHCARE
         </div>
         <p class="text-center mt-3 p-3 text-blue-800 text-lg">Your better life, our responsibility</p>
         <p class="text-gray-500 mx-auto max-w-4xl px-4 text-lg leading-relaxed text-justify mt-6">
-            We are **MeD-SiNE Healthcare**, specializing in delivering high-quality, innovative solutions to meet your unique healthcare needs. We were established in 2020 and incorporated in 2024. We focus on quality, innovation, and customer satisfaction, delivering tailored solutions to meet the diverse needs of our clients. Med-SiNE Healthcare is an emerging leading global healthcare company with a strong team experienced in R&D, Regulatory, and Supply Chain. Our vision is improving lives through innovative research and development, advanced manufacturing capabilities to make medicine affordable to everyone, and strategic distribution of a diverse portfolio of pharmaceutical products to ensure quality products reach each corner of the world.
+           Founded in 2019 with the an AIM of "Breaking Barriers to Better Health Across Continents," MeD-SiNE Healthcare operates as a subsidiary of Global Trade Corp and Consulting. Initially, the company began as a consultancy service for renowned pharmaceutical companies across India, focusing on enhancing the quality of finished formulations to build global client confidence. This was achieved through collaboration with highly accredited laboratories, ensuring goods were certified prior to export.
+With extensive expertise in various healthcare sectors such as Pharmaceuticals Finished Formulation and Raw Materials, Specialty chemicals, Food and Nutraceuticals, Cosmetics, Medical Devices, Diagnostics Equipments and Consumables, Surgical/Disposable and Hospital Equipment—MeD-SiNE Healthcare was officially incorporated in 2024. 
+The company's head office is located in Baroda, with a communication address in Mumbai to streamline business operations.
+
         </p>
         <p class="text-gray-500 mx-auto max-w-4xl px-4 text-lg leading-relaxed text-justify mt-6">
-            To support this vision, we offer an extensive portfolio of **RAW MATERIAL API/Excipients/BULK TO FINISHED Healthcare and Wellness PRODUCTS**, including but not limited to Pharmaceuticals, Cosmeceuticals, Herbal Products, Medical Devices, Surgical supplies, Hospital Consumables, and Diagnostic Equipment. In today's world, accessing quality pharmaceuticals has become a significant challenge. High-quality medications are often prohibitively expensive, while more affordable options frequently fail to meet the necessary standards to ensure effective treatment. MeD-SiNE Healthcare is dedicated to bridging this gap by producing top-quality pharmaceuticals at prices that are accessible to all.
+           To be a globally trusted provider of high-quality, affordable, and innovative Healthcare Solutions, improving healthcare access and enhancing lives across international markets."
+This vision emphasizes reliability, affordability, innovation, and a global commitment to healthcare. Would you like to refine it further based on your specific business goals?
+
         </p>
         
         <div class="text-center mt-12 font-bold text-indigo-900 text-2xl md:text-3xl">QUALITY POLICY</div>
         <p class="text-gray-500 mx-auto max-w-4xl px-4 text-lg leading-relaxed text-justify mt-6 mb-12">
-            At **Med-SiNE Healthcare**, we are committed to ensuring the highest standards of quality in all aspects of our pharmaceutical operations. Our mission is to provide safe, effective, and reliable pharmaceutical products to our global customers, complying with applicable regulatory requirements and international standards.
-        </p>
+          Our mission is to deliver high-quality, affordable, and regulatory-compliant pharmaceutical products to global markets. We strive to enhance healthcare accessibility by building strong partnerships, ensuring supply chain efficiency, and adhering to the highest standards of safety, ethics, and innovation. Through continuous improvement and customer-centric solutions, we aim to make a meaningful impact on global health
+          </p>
     </div>
 
     <footer id="footer" class="bg-indigo-950 text-white py-8 mt-5 pt-4">
@@ -133,32 +234,32 @@
                     </p>
                 </div>
 
-                <div class="space-y-4">
+             <div class="space-y-4">
                     <h2 class="text-xl font-bold">Site map</h2>
                     <ul class="space-y-2">
                         <li>
-                            <a href="./index.html" class="text-black-400 hover:text-white transition-colors flex items-center">
+                            <a href="./index.html" class="text-black-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>Home
                             </a>
                         </li>
                         <li>
-                            <a href="./about-us.html" class="text-black-400 hover:text-white transition-colors flex items-center">
+                            <a href="./about-us.html" class="text-black-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>About Us
                             </a>
                         </li>
                         <li>
-                            <a href="./products.html" class="text-black-400 hover:text-white transition-colors flex items-center">
+                            <a href="./products.html" class="text-black-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
                                 <i class="fa fa-caret-right mr-2"></i>Products
                             </a>
                         </li>
                         <li>
-                            <a href="./Contact-us.html" class="text-black-400 hover:text-white transition-colors flex items-center">
-                                <i class="fa fa-caret-right mr-2"></i>Contact Us
+                            <a href="./Country_Presence.html" class="text-black-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
+                                <i class="fa fa-caret-right mr-2"></i>Global Presence
                             </a>
                         </li>
                         <li>
-                            <a href="./Country_Presence.html" class="text-black-400 hover:text-white transition-colors flex items-center">
-                                <i class="fa fa-caret-right mr-2"></i>Global Presence
+                            <a href="./Contact-us.html" class="text-black-400 hover:text-white transition-colors flex items-center text-sm sm:text-base">
+                                <i class="fa fa-caret-right mr-2"></i>Contact Us
                             </a>
                         </li>
                     </ul>
@@ -200,8 +301,25 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
+        // Initialize Owl Carousel
         $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: { items: 1 },
+                    600: { items: 1 },
+                    1000: { items: 1 }
+                }
+            });
+
             // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -210,6 +328,39 @@
                 mobileMenu.classList.toggle('active');
             });
         });
+
+        // Custom Slider Functions
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const slider = document.getElementById('slider');
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlide(slideIndex);
+        }
+
+        // Auto-advance slider
+        setInterval(nextSlide, 5000);
     </script>
 </body>
 </html>
